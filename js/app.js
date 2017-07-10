@@ -209,7 +209,7 @@ $('a[href*="#"]')
         event.preventDefault();
         $('html, body').animate({
           scrollTop: target.offset().top
-        }, 1000, function() {
+        }, 200, function() {
           // Callback after animation
           // Must change focus!
           var $target = $(target);
@@ -226,75 +226,86 @@ $('a[href*="#"]')
   });
 
 
+var logoLine = new Vivus('svglogo', {
+	file: 'img/logoline.svg',
+	duration: 80,
+	onReady: function (myVivus) {
+		
+	}
+});
+
 $('#way-1, #way-2, #way-3').waypoint(function(direction) {
 	if (direction == 'up') {};
     $(this).removeClass('off')
     $(this).siblings('.section-div').addClass('off')
 }, {
-  offset: 0
+  offset: 15
 })
 $('#way-1').waypoint(function(direction) {
 	if (direction == 'up') {};
     $('#title-1').addClass('on')
     $('#title-1').siblings('h2').removeClass('on')
-    $('#servicos-wrapper').removeClass('bgwhite')
     $('#servicos-wrapper').removeClass('bgblue')
 
 
 }, {
-  offset: 0
+  offset: 15
 })
 $('#way-2').waypoint(function(direction) {
 	if (direction == 'up') {};
-    $('#title-2').addClass('on')
-    $('#title-2').siblings('h2').removeClass('on')
-    $('#servicos-wrapper').addClass('bgblue')
-    $('#servicos-wrapper').removeClass('bgwhite')
+    $('#title-2').addClass('on');
+    $('#title-2').siblings('h2').removeClass('on');
+    $('#servicos-wrapper').addClass('bgblue');
 }, {
-  offset: 0
+  offset: 15
 })
 $('#way-3').waypoint(function(direction) {
 	if (direction == 'up') {};
-    $('#title-3').addClass('on')
-    $('#title-3').siblings('h2').removeClass('on')
-    $('#servicos-wrapper').addClass('bgwhite')
-    $('#servicos-wrapper').removeClass('bgblue')
+    $('#title-3').addClass('on');
+    $('#title-3').siblings('h2').removeClass('on');
+    $('#servicos-wrapper').removeClass('bgblue');
 
 }, {
-  offset: 0
+  offset: 15
 })
 
 $('#way-1, #way-2, #way-3').waypoint(function(direction) {
 	if (direction == 'down') {};
-    $(this).removeClass('off')
-    $(this).siblings('.section-div').addClass('off')
+    $(this).removeClass('off');
+    $(this).siblings('.section-div').addClass('off');
 }, {
-  offset: '50%'
+  offset: '40%'
 })
 $('#way-1').waypoint(function(direction) {
 	if (direction == 'down') {};
-    $('#title-1').addClass('on')
-    $('#title-1').siblings('h2').removeClass('on')
-    $('#servicos-wrapper').removeClass('bgwhite')
-    $('#servicos-wrapper').removeClass('bgblue')
+    $('#title-1').addClass('on');
+    $('#title-1').siblings('h2').removeClass('on');
+    $('#servicos-wrapper').removeClass('bgblue');
 }, {
-  offset: '50%'
+  offset: '40%'
 })
 $('#way-2').waypoint(function(direction) {
 	if (direction == 'down') {};
-    $('#title-2').addClass('on')
-    $('#title-2').siblings('h2').removeClass('on')
-    $('#servicos-wrapper').addClass('bgblue')
-    $('#servicos-wrapper').removeClass('bgwhite')
+    $('#title-2').addClass('on');
+    $('#title-2').siblings('h2').removeClass('on');
+    $('#servicos-wrapper').addClass('bgblue');
+    logoLine.play();
 }, {
-  offset: '50%'
+  offset: '40%'
 })
 $('#way-3').waypoint(function(direction) {
 	if (direction == 'down') {};
-    $('#title-3').addClass('on')
-    $('#title-3').siblings('h2').removeClass('on')
-    $('#servicos-wrapper').addClass('bgwhite')
-    $('#servicos-wrapper').removeClass('bgblue')
+    $('#title-3').addClass('on');
+    $('#title-3').siblings('h2').removeClass('on');
+    $('#servicos-wrapper').removeClass('bgblue');
 }, {
-  offset: '50%'
+  offset: '40%'
 })
+
+
+$(function(){
+	$('.map').on('click', function(){
+		$(this).addClass('interact');
+	});
+});
+

@@ -4,8 +4,8 @@
 		
 		<div class="container-fluid" id="home-banner">
 			<div id="home-banner-buttons">
-				<button ng-click="toggleEncontreBtn()" class="btn btn-warning"><h4>ENCONTRE SEU IMÓVEL</h4></button>
-				<button class="btn btn-info" ng-click="cadastreToggle()"><h4>CADASTRE SEU IMÓVEL</h4></button>
+				<button ng-click="toggleEncontreBtn()" class="btn btn-warning"><h4>ENCONTRAR IMÓVEL</h4></button>
+				<button class="btn btn-info" ng-click="cadastreToggle()"><h4>CADASTRAR IMÓVEL</h4></button>
 				<a href="#destaque"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
 			</div>
 			<div id="busca-imovel" class="row">
@@ -59,25 +59,10 @@
 						  <input type="number" step="10" class="form-control" aria-describedby="area-min">
 						  <span class="input-group-addon" id="area-min">m<sup>2</sup></span>
 						</div>
-						
 					</div>
 
 					<h5 class="blue">DORMITÓRIOS</h5>
 					
-					<div class="btn-toolbar" role="toolbar">
-					  <div class="btn-group" role="group">
-						<button type="button" class="btn btn-default">1+</button>
-
-						<button type="button" class="btn btn-default">2+</button>
-
-						<button type="button" class="btn btn-default">3+</button>
-
-						<button type="button" class="btn btn-default">4+</button>
-
-						<button type="button" class="btn btn-default">5+</button>
-					  </div>
-					</div>
-					<h5 class="blue">SUÍTES</h5>
 					<div class="btn-toolbar" role="toolbar">
 					  <div class="btn-group" role="group">
 						<button type="button" class="btn btn-default">1+</button>
@@ -129,7 +114,7 @@
 
 		<!-- 	Home Imoveis Container -->
 
-		<div class="container">
+<!-- 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
 					<a name="destaque"></a>
@@ -149,6 +134,6 @@
 					<p ng-if="imovel.finalidade != 'Venda'" style="font-family: Helvetica, Arial, sans-serif">{{imovel.preco_locacao | currency:"R$ "}}</p>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 <?php include 'footer.php' ?>
