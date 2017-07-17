@@ -1,8 +1,8 @@
 # Anglo Americana Imóveis
 
-Usei a framework Angular JS para fazer a Interface de Usuário e para mimetizar o banco de dados, evitando a repetição de HTML em loops e facilitando a reprodução de páginas de diferentes imóveis.
+Usei a framework **Angular JS** para fazer a Interface de Usuário e para mimetizar o banco de dados, evitando a repetição de HTML em loops e facilitando a reprodução de páginas de diferentes imóveis.
 
-Os loops usam a diretiva do Angular ng-repeat, como no exemplo (resultados-de-busca.php):
+Os loops usam a diretiva do Angular **ng-repeat**, como no exemplo (resultados-de-busca.php):
 
 ```
 <div ng-repeat-start="imovel in imoveisBusca track by $index" class="slider-container col-sm-12 col-md-6">  
