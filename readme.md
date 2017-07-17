@@ -4,7 +4,7 @@ Usei a framework Angular JS para fazer a Interface de Usuário e para mimetizar 
 
 Os loops usam a diretiva do Angular ng-repeat, como no exemplo (resultados-de-busca.php):
 
-'''
+```
 <div ng-repeat-start="imovel in imoveisBusca track by $index" class="slider-container col-sm-12 col-md-6">  
 	<div class="fav" ng-click="addFav($event)" data-toggle="tooltip" data-placement="bottom" title="Adicionar / Remover dos favoritos"><i class="fa fa-star-o" aria-hidden="true"></i></div>
 	
@@ -28,4 +28,4 @@ Os loops usam a diretiva do Angular ng-repeat, como no exemplo (resultados-de-bu
 	</a>
 </div>
 <div ng-repeat-end ng-if="($index + 1) % 2 == 0" class="clearfix"></div>
-'''
+```
