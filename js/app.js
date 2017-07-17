@@ -1,4 +1,16 @@
+// Iniciate App
+
 angular.module('anglo', [])
+
+// Troca formatação de moedas para padrão brasileiro
+
+.config(['$provide', function($provide) {
+        $provide.decorator('$locale', ['$delegate', function($delegate) {
+            $delegate.NUMBER_FORMATS.DECIMAL_SEP = ',';
+            $delegate.NUMBER_FORMATS.GROUP_SEP = '.';
+            return $delegate;
+        }]);
+    }])
 /*
 	Directives
 */

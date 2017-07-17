@@ -9,7 +9,7 @@
 		<div class="spacer hidden-xs" style="height: 30px;"></div>
 		<div class="col-md-6">
 			<div class="spacer" style="height: 20px;"></div>
-			<img src="img/fachada.jpg" alt="" class="img-responsive">
+			<img src="images/fachada.jpg" alt="" class="img-responsive">
 		</div>
 		<div class="col-sm-12 col-md-6">
 			<a name="empresa"></a>

@@ -1,7 +1,7 @@
 	<div id="footer-container" class="container-fluid ">
 		<div class="container">
 			<div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-1 col-lg-3 col-lg-offset-2">
-				<img src="img/logoSiteFooter.png" alt="" class="img-responsive">
+				<img src="images/logoSiteFooter.png" alt="" class="img-responsive">
 			</div>
 			<div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1 col-lg-3 col-lg-offset-1">
 				<p>
@@ -28,27 +28,32 @@
 	<script src="js/sss.min.js"></script>
     <script src="https://use.fontawesome.com/4ef912055f.js"></script>
 	<script>
-		// Iniciar Slider
+// Iniciar Slider
+
 		jQuery(function($) {$('#imoveis-wrapper .slider').sss({
 			slideShow : false
 		});});
+
 		jQuery(function($) {$('#imovel-wrapper .slider').sss({
 			slideShow : true
 		});});
 
-		//Iniciar Lightbox
+//Iniciar Lightbox
+
 		$(document).on('click', '[data-toggle="lightbox"]', function(event) {
 		    event.preventDefault();
 		    $(this).ekkoLightbox({ 
 		    });
 		});
 
-		// Iniciar Tooltip
+// Iniciar Tooltip
+
 		$(function () {
 		  $('[data-toggle="tooltip"]').tooltip()
 		})
 
-		// Contato - Habilitar/Desabilibar clique em mapa
+// Contato - Habilitar/Desabilibar clique em mapa
+
 		$(function(){
 			$('.map').on('click', function(){
 				$(this).addClass('interact');
@@ -68,7 +73,7 @@
 			$('#ligamosModal').modal('show');
 		})
 
-		// Smooth Scroll - Suavizar transições de altura na página via ancoras (#)
+// Smooth Scroll - Suavizar transições de altura na página via ancoras (#)
 
 		// Select all links with hashes
 		$('a[href*="#"]')
@@ -107,20 +112,19 @@
 		    }
 		  });
 
-		// Serviços - Relocation - Logo Animation Background
+// Serviços - Relocation - Logo Animation Background
+
 		if (showlogo) {
 			var logoLine = new Vivus('svglogo', {
-				file: 'img/logoline.svg',
+				file: 'images/logoline.svg',
 				duration: 80,
 				onReady: function (myVivus) {
 					
 				}
 			});
 		}
-			
 
-
-		// Waypoints Serviços e Relocation
+// Waypoints Serviços e Relocation
 
 		$('#way-1, #way-2, #way-3').waypoint(function(direction) {
 			if (direction == 'up') {};
@@ -187,7 +191,7 @@
 		  offset: '40%'
 		})
 
-		// Serviços - Relocation - Toggle botão scrollTop quando chegar no fim da página
+// Serviços - Relocation - Toggle botão scrollTop quando chegar no fim da página
 
 		$('#footer-container').waypoint(function(direction) {
 			$('#scrollTop').toggleClass('fade')
