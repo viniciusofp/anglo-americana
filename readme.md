@@ -1,5 +1,19 @@
 # Anglo Americana Imóveis
 
+## Estrutura
+
+Mantive os mesmos nomes dos arquivos e pastas do site atual. Busquei deixar o código o mais enxuto possível e coloquei comentários em todos arquivos para facilitar a identificação de cada elemento das páginas.
+
+Para deixar mais organizado, separei o código dos popups **Cadastre seu imóvel**, **Enviamos um email**, **Ligamos para você** e **Envie para um amigo** em directives do Angular. Os arquivos estão na pasta **directives/**.
+
+### Bibliotecas e Frameworks
+
+- [**Bootstrap**](http://getbootstrap.com/): Front-End
+- [**Angular JS**](https://docs.angularjs.org/api): UI e Data Binding
+- [**Vivus JS e Pathformer**](https://maxwellito.github.io/vivus/): Animação SVG nas páginas Serviços e Relocation
+- [**Waypoints**](http://imakewebthings.com/waypoints/): Animação CSS com Scroll nas páginas Serviços e Relocation
+- [**Super Simple Slider](http://supersimpleslider.com/): Slider fotos de Imóveis
+
 ## Angular JS
 
 Usei a framework **Angular JS** para fazer a Interface de Usuário e para mimetizar o banco de dados, evitando a repetição de HTML em loops e facilitando a reprodução de páginas de diferentes imóveis.
