@@ -115,6 +115,8 @@ Usei um truque pra simular as páginas de diferentes imóveis, colocando o index
 E definindo o imóvel a partir desse index no arranjo de imóveis (app.js):
 
 ```
-	$scope.imovel = $scope.imoveisBusca[window.location.hash.substr(1)];
+$scope.imovel = $scope.imoveisBusca[window.location.hash.substr(1)];
 ```
+
+Assim evitei que todos links levassem pro mesmo imóvel ou criar várias páginas estáticas.
 

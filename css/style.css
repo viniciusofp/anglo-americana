@@ -129,6 +129,10 @@ h4 {
   clear: both;
   display: block; }
 
+.inline-col {
+  display: inline;
+  float: left; }
+
 #toprow {
   padding: 5px;
   background: #282828;
