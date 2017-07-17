@@ -1,12 +1,3 @@
-<!-- 	<div id="footer-toprow" class="container-fluid">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12">
-					<p>Conecte-se</p>
-				</div>
-			</div>
-		</div>
-	</div> -->
 	<div id="footer-container" class="container-fluid ">
 		<div class="container">
 			<div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-1 col-lg-3 col-lg-offset-2">
@@ -27,6 +18,7 @@
   src="https://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.2.0/ekko-lightbox.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/waypoints.min.js"></script>
 	<script src="js/pathformer.js"></script>
@@ -36,33 +28,32 @@
 	<script src="js/sss.min.js"></script>
     <script src="https://use.fontawesome.com/4ef912055f.js"></script>
 	<script>
-		// Iniciate Slider
-		jQuery(function($) {$('.slider').sss({
+		// Iniciar Slider
+		jQuery(function($) {$('#imoveis-wrapper .slider').sss({
 			slideShow : false
 		});});
+		jQuery(function($) {$('#imovel-wrapper .slider').sss({
+			slideShow : true
+		});});
 
-		// Iniciate Tooltip
+		//Iniciar Lightbox
+		$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+		    event.preventDefault();
+		    $(this).ekkoLightbox({ 
+		    });
+		});
+
+		// Iniciar Tooltip
 		$(function () {
 		  $('[data-toggle="tooltip"]').tooltip()
 		})
 
-		// Javascript to enable link to tab
-		var url = document.location.toString();
-		if (url.match('#')) {
-		    $('.nav-tabs a[href="#' + url.split('#')[1] + '"]').tab('show');
-		} 
-
-		// Change hash for page-reload
-		$('.nav-tabs a').on('shown.bs.tab', function (e) {
-		    window.location.hash = e.target.hash;
-		})
-
+		// Contato - Habilitar/Desabilibar clique em mapa
 		$(function(){
 			$('.map').on('click', function(){
 				$(this).addClass('interact');
 			});
 		});
-
 		$(document).click(function(event) { 
 		    if(!$(event.target).closest('.map').length) {
 		        if($('.map').is(":visible")) {
@@ -70,8 +61,141 @@
 		        }
 		    }        
 		})
+		$('#enviamosemail-trigger').click(function(event) {      
+			$('#emailModal').modal('show');
+		})
+		$('#ligamos-trigger').click(function(event) {      
+			$('#ligamosModal').modal('show');
+		})
+
+		// Smooth Scroll - Suavizar transições de altura na página via ancoras (#)
+
+		// Select all links with hashes
+		$('a[href*="#"]')
+		  // Remove links that don't actually link to anything
+		  .not('[href="#"]')
+		  .not('[href="#0"]')
+		  .click(function(event) {
+		    // On-page links
+		    if (
+		      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+		      && 
+		      location.hostname == this.hostname
+		    ) {
+		      // Figure out element to scroll to
+		      var target = $(this.hash);
+		      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+		      // Does a scroll target exist?
+		      if (target.length) {
+		        // Only prevent default if animation is actually gonna happen
+		        event.preventDefault();
+		        $('html, body').animate({
+		          scrollTop: target.offset().top
+		        }, 200, function() {
+		          // Callback after animation
+		          // Must change focus!
+		          var $target = $(target);
+		          $target.focus();
+		          if ($target.is(":focus")) { // Checking if the target was focused
+		            return false;
+		          } else {
+		            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+		            $target.focus(); // Set focus again
+		          };
+		        });
+		      }
+		    }
+		  });
+
+		// Serviços - Relocation - Logo Animation Background
+		if (showlogo) {
+			var logoLine = new Vivus('svglogo', {
+				file: 'img/logoline.svg',
+				duration: 80,
+				onReady: function (myVivus) {
+					
+				}
+			});
+		}
+			
+
+
+		// Waypoints Serviços e Relocation
+
+		$('#way-1, #way-2, #way-3').waypoint(function(direction) {
+			if (direction == 'up') {};
+		    $(this).removeClass('off')
+		    $(this).siblings('.section-div').addClass('off')
+		}, {
+		  offset: 15
+		})
+		$('#way-1').waypoint(function(direction) {
+			if (direction == 'up') {};
+		    $('#title-1').addClass('on')
+		    $('#title-1').siblings('h2').removeClass('on')
+		    $('#servicos-wrapper').removeClass('bgblue')
+		}, {
+		  offset: 15
+		})
+		$('#way-2').waypoint(function(direction) {
+			if (direction == 'up') {};
+		    $('#title-2').addClass('on');
+		    $('#title-2').siblings('h2').removeClass('on');
+		    $('#servicos-wrapper').addClass('bgblue');
+		}, {
+		  offset: 15
+		})
+		$('#way-3').waypoint(function(direction) {
+			if (direction == 'up') {};
+		    $('#title-3').addClass('on');
+		    $('#title-3').siblings('h2').removeClass('on');
+		    $('#servicos-wrapper').removeClass('bgblue');
+
+		}, {
+		  offset: 15
+		})
+		$('#way-1, #way-2, #way-3').waypoint(function(direction) {
+			if (direction == 'down') {};
+		    $(this).removeClass('off');
+		    $(this).siblings('.section-div').addClass('off');
+		}, {
+		  offset: '40%'
+		})
+		$('#way-1').waypoint(function(direction) {
+			if (direction == 'down') {};
+		    $('#title-1').addClass('on');
+		    $('#title-1').siblings('h2').removeClass('on');
+		    $('#servicos-wrapper').removeClass('bgblue');
+		}, {
+		  offset: '40%'
+		})
+		$('#way-2').waypoint(function(direction) {
+			if (direction == 'down') {};
+		    $('#title-2').addClass('on');
+		    $('#title-2').siblings('h2').removeClass('on');
+		    $('#servicos-wrapper').addClass('bgblue');
+		    logoLine.play();
+		}, {
+		  offset: '40%'
+		})
+		$('#way-3').waypoint(function(direction) {
+			if (direction == 'down') {};
+		    $('#title-3').addClass('on');
+		    $('#title-3').siblings('h2').removeClass('on');
+		    $('#servicos-wrapper').removeClass('bgblue');
+		}, {
+		  offset: '40%'
+		})
+
+		// Serviços - Relocation - Toggle botão scrollTop quando chegar no fim da página
+
+		$('#footer-container').waypoint(function(direction) {
+			$('#scrollTop').toggleClass('fade')
+		}, {
+		  offset: '100%'
+		})
+
 
 	</script>
-
 	</body>
 </html>

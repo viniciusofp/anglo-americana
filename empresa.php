@@ -1,30 +1,28 @@
 <?php include 'header.php' ?>
 
-<div id="empresa-container" class="containe-fluid">
-	<div class="container">
-		<div class="spacer hidden-xs" style="height: 30px;"></div>
-		<div class="row">
-			<div class="col-xs-12">
-				<h2 class="red">Vendemos, alugamos e administramos imóveis <br class="hidden-sm hidden-xs">de alto padrão nos melhores bairros da cidade.</h2>
-			</div>
-			<div class="spacer hidden-xs" style="height: 30px;"></div>
-			<div class="col-md-6">
-				<div class="spacer" style="height: 20px;"></div>
-				<img src="http://www.angloamericana.com.br/images/empresaimage.jpg" alt="" class="img-responsive">
-			</div>
-			<div class="col-sm-12 col-md-6">
-				<a name="empresa"></a>
-		    	
-				<h3>EMPRESA</h3>
-				<p class="lead">A Anglo Americana atua no mercado imobiliário de São Paulo desde 1941 fornecendo aos clientes um atendimento exclusivo e personalizado.</p>
-				<p>Altamente capacitada, nossa equipe de corretores é composta por profissionais certificados, multilíngues e conhecedores do mercado, aptos para atender as necessidades dos clientes. Temos como referência o acolhimento a empresas multinacionais, representações diplomáticas, executivos e investidores dos mais variados países.</p>
-	
-				<p>Nossa missão é entregar serviços excepcionais que garantam satisfação na escolha do imóvel perfeito. Para atingir essa qualidade, trabalhamos sobre uma sólida estrutura de confiabilidade, ética e expertise.</p>
-				<div class="spacer"></div>
-			</div>
+<div id="empresa-container"class="container">
+	<div class="spacer hidden-xs" style="height: 30px;"></div>
+	<div class="row">
+		<div class="col-xs-12">
+			<h2 class="red">Vendemos, alugamos e administramos imóveis <br class="hidden-sm hidden-xs">de alto padrão nos melhores bairros da cidade.</h2>
 		</div>
-	</div>
-</div>
+		<div class="spacer hidden-xs" style="height: 30px;"></div>
+		<div class="col-md-6">
+			<div class="spacer" style="height: 20px;"></div>
+			<img src="img/fachada.jpg" alt="" class="img-responsive">
+		</div>
+		<div class="col-sm-12 col-md-6">
+			<a name="empresa"></a>
+	    	
+			<h3>EMPRESA</h3>
+			<p class="lead">A Anglo Americana atua no mercado imobiliário de São Paulo desde 1941 fornecendo aos clientes um atendimento exclusivo e personalizado.</p>
+			<p>Altamente capacitada, nossa equipe de corretores é composta por profissionais certificados, multilíngues e conhecedores do mercado, aptos para atender as necessidades dos clientes. Temos como referência o acolhimento a empresas multinacionais, representações diplomáticas, executivos e investidores dos mais variados países.</p>
+
+			<p>Nossa missão é entregar serviços excepcionais que garantam satisfação na escolha do imóvel perfeito. Para atingir essa qualidade, trabalhamos sobre uma sólida estrutura de confiabilidade, ética e expertise.</p>
+			<div class="spacer"></div>
+		</div>
+	</div> <!-- row end -->
+</div> <!-- container end -->
 	
 <div class="container-fluid">
 	<a name="cliente"></a>
@@ -32,7 +30,6 @@
 		<div class="col-sm-12">
 			<h3 class="text-center">CLIENTES</h3>
 		</div>
-		
 		<div class="col-xs-3 col-sm-2 col-sm-offset-1">
 			<img src="http://www.angloamericana.com.br/images/clientes/coca-cola-logo.jpg" alt="" class="img-responsive">
 		</div>
@@ -100,11 +97,7 @@
 		<div class="col-xs-3 col-sm-2">
 			<img src="http://www.angloamericana.com.br/images/clientes/hitachi-logo.jpg" alt="" class="img-responsive">
 		</div>
-	</div>	
-</div>
-
-		</div>
-		<div class="spacer"></div>
-	</div>
-</div>
+	</div> <!-- row end -->
+</div> <!-- container end -->
+<div class="spacer"></div>
 <?php include 'footer.php' ?>

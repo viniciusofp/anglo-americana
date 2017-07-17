@@ -1,36 +1,38 @@
 angular.module('anglo', [])
-
 /*
 	Directives
 */
-
-// Header
-.directive('angloHeader', function() {
-  
-  return {
-      restrict: 'E',
-      templateUrl: 'directives/header.html'
-  };
-
-})
-// Footer
-.directive('angloFooter', function() {
-  
-  return {
-      restrict: 'E',
-      templateUrl: 'directives/footer.html'
-  };
-
-})
 // Cadastre Seu Imóvel
 .directive('cadastre', function() {
-  
   return {
       restrict: 'E',
       templateUrl: 'directives/cadastre.html'
   };
-
 })
+// Enviar para amigo
+.directive('enviarAmigo', function() {
+  return {
+      restrict: 'E',
+      templateUrl: 'directives/enviaramigo.html'
+  };
+})
+// Enviamos um email para você
+.directive('enviamosEmail', function() {
+  return {
+      restrict: 'E',
+      templateUrl: 'directives/enviamosemail.html'
+  };
+})
+// Ligamos para você
+.directive('ligamos', function() {
+  return {
+      restrict: 'E',
+      templateUrl: 'directives/ligamos.html'
+  };
+})
+
+// Imoveis Data
+
 
 
 /*
@@ -40,6 +42,8 @@ angular.module('anglo', [])
 // Main Controller
 
 .controller('main', ['$scope', function($scope) {
+
+	// Imóveis em Destaque Data
 	$scope.imoveisDestaque = [
 		{
 			referencia: '350680',
@@ -128,6 +132,227 @@ angular.module('anglo', [])
 			detalhes: ['Mobília']
 		}
 	]
+
+	// Resultados da Busca Data
+	$scope.imoveisBusca = [
+		{
+			referencia: '350680',
+			finalidade: 'Venda',
+			tipo: 'Cobertura',
+			condominio: 3800,
+			bairro: 'Paraíso',
+			preco_venda: 3800000,
+			preco_locacao: 22000,
+			fotos: [
+				'http://www.angloamericana.com.br/img/arquivoanexo/350680_0.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/350680_1.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/350680_2.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/350680_3.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/350680_4.jpg'
+			],
+			suites: 3,
+			dormitorios: 4,
+			vagas: 4,
+			area: 285,
+			descricao: 'Cobertura decorada com muito bom gosto , pode ser locada também sem os móveis, no Paraíso, piscina e academia privativas , pronta para morar com muito conforto e lazer , ar condicionado em 285.00 m com 4 dts sendo 3 suítes, 4 vagas.',
+			detalhes: []
+		},
+		{
+			referencia: '181170',
+			finalidade: 'Venda',
+			tipo: 'Apartamento',
+			condominio: 1270,
+			bairro: 'Vila Nova Conceição',
+			preco_venda: 920000,
+			preco_locacao: 5600,
+			fotos: [
+				'http://www.angloamericana.com.br/img/arquivoanexo/181170_0.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/181170_1.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/181170_2.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/181170_3.jpg',
+			],
+			suites: 1,
+			dormitorios: 1,
+			vagas: 1,
+			area: 48,
+			descricao: 'Apartamento VILA NOVA CONCEIÇÃO com: 48.00 m² de área útil, 1 dormitório ( sendo 1 suíte ), mobília, 1 vaga de garagem.',
+			detalhes: ['Mobília']
+		},
+		{
+			referencia: '340672',
+			finalidade: 'Venda',
+			tipo: 'Casa',
+			condominio: 0,
+			bairro: 'Jardim Europa',
+			preco_venda: 15000000,
+			preco_locacao: 60000,
+			fotos: [
+				'http://www.angloamericana.com.br/img/arquivoanexo/340672_0.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/340672_1.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/340672_2.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/340672_3.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/340672_4.jpg',
+			],
+			suites: 4,
+			dormitorios: 4,
+			vagas: 4,
+			area: 528,
+			descricao: 'Linda casa no JARDIM EUROPA 528.00 m² de área construída, 4 dormitórios ( sendo 4 suítes ), 922.00 metros de terreno, banheiro sr. e sra., closet, ar condicionado, piscina, 4 vagas de garagem.',
+			detalhes: ['Ar Condicionado', 'Banheiro Sr. e Sra.', 'Closet', 'Piscina']
+		},
+		{
+			referencia: '347875',
+			finalidade: 'Locação',
+			tipo: 'Apartamento',
+			condominio: 3600,
+			bairro: 'Moema',
+			preco_venda: 0,
+			preco_locacao: 15000,
+			fotos: [
+				'http://www.angloamericana.com.br/img/arquivoanexo/347875_0.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/347875_1.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/347875_2.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/347875_3.jpg'
+			],
+			suites: 2,
+			dormitorios: 2,
+			vagas: 4,
+			area: 200,
+			descricao: 'Apartamento MOEMA com: 200.00 m² de área útil, 2 dormitórios ( sendo 2 suítes ), banheiro sr. e sra., varanda, mobília, hidro-massagem, escritório, suíte master, churrasqueira privativa. Condomínio com: aquecimento, forno, ar condicionado, piscina, quadra poli-esportiva, sauna, salão de festas, sala ginastica, churrasqueira, espaço gourmet, 4 vagas de garagem.',
+			detalhes: ['Mobília']
+		},
+		{
+			referencia: '349841',
+			finalidade: 'Venda',
+			tipo: 'Casa',
+			condominio: 3600,
+			bairro: 'Alto de Pinheiros',
+			preco_venda: 5900000,
+			preco_locacao: 25000,
+			fotos: [
+				'http://www.angloamericana.com.br/img/arquivoanexo/349841_0.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/349841_1.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/349841_2.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/349841_3.jpg'
+			],
+			suites: 4,
+			dormitorios: 4,
+			vagas: 6,
+			area: 580,
+			descricao: 'Casa ALTO DE PINHEIROS 580 m² de área construída, 4 dormitórios ( sendo 4 suítes ), 750 metros de terreno, 6 vagas de garagem.',
+			detalhes: []
+		},
+		{
+			referencia: '261893',
+			finalidade: 'Venda',
+			tipo: 'Casa Cond. Fechado',
+			condominio: 3600,
+			bairro: 'Morumbi',
+			preco_venda: 12000000,
+			preco_locacao: 38000,
+			fotos: [
+				'http://www.angloamericana.com.br/img/arquivoanexo/261893_0.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/261893_1.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/261893_2.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/261893_3.jpg'
+			],
+			suites: 5,
+			dormitorios: 5,
+			vagas: 9,
+			area: 2000,
+			descricao: 'Casa Cond. Fech. MORUMBI 1000.00 m² de área construída, 5 dormitórios ( sendo 5 suítes ), 2000.00 metros de terreno, wc empregados, copa, adega, living, sala de jantar, lareira, sala de almoço, piscina, play ground, sauna, quadra de tênis, churrasqueira, 9 vagas de garagem.',
+			detalhes: ['Adega', 'Copa', 'Lareira', 'Sala de Almoço', 'Sala de Jantar', 'Sala de Estar', 'WC Empregados', 'Churrasqueira', 'Piscina', 'Playground', 'Sauna', 'Quadra de Tênis']
+		},
+		{
+			referencia: '290591',
+			finalidade: 'Venda',
+			tipo: 'Casa Cond. Fechado',
+			condominio: 5300,
+			bairro: 'Alto da Boa Vista',
+			preco_venda: 2400000,
+			preco_locacao: 0,
+			fotos: [
+				'http://www.angloamericana.com.br/img/arquivoanexo/290591_0.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/290591_1.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/290591_2.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/290591_3.jpg'
+			],
+			suites: 4,
+			dormitorios: 4,
+			vagas: 0,
+			area: 727,
+			descricao: 'Casa Cond. Fech. ALTO DA BOA VISTA 727.00 m² de área construída, 4 dormitórios ( sendo 4 suítes ).',
+			detalhes: ['Adega', 'Copa', 'Lareira', 'Sala de Almoço', 'Sala de Jantar', 'Sala de Estar', 'WC Empregados', 'Churrasqueira', 'Piscina', 'Playground', 'Sauna', 'Quadra de Tênis']
+		},
+		{
+			referencia: '343279',
+			finalidade: 'Venda',
+			tipo: 'Cobertura',
+			condominio: 2912,
+			bairro: 'Moema',
+			preco_venda: 2180000,
+			preco_locacao: 0,
+			fotos: [
+				'http://www.angloamericana.com.br/img/arquivoanexo/343279_0.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/343279_1.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/343279_2.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/343279_3.jpg'
+			],
+			suites: 1,
+			dormitorios: 3,
+			vagas: 3,
+			area: 2000,
+			descricao: 'Cobertura Duplex MOEMA com: 197.00 m² de área útil, 3 dormitórios ( sendo 1 suíte ), armário embutido, terraço, varanda, lareira. Condomínio com: jardim, piscina, play ground, salão de festas, sala ginastica, 3 vagas de garagem.',
+			detalhes: ['Armário Embutido', 'Duplex', 'Lareira', 'Terraço', 'Varanda', 'Jardim', 'Piscina', 'Playground', 'Sala de Ginástica', 'Salão de Festas']
+		},
+		{
+			referencia: '342588',
+			finalidade: 'Venda',
+			tipo: 'Apartamento',
+			condominio: 950,
+			bairro: 'Jardins',
+			preco_venda: 1400000,
+			preco_locacao: 0,
+			fotos: [
+				'http://www.angloamericana.com.br/img/arquivoanexo/342588_0.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/342588_1.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/342588_2.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/342588_3.jpg'
+			],
+			suites: 0,
+			dormitorios: 3,
+			vagas: 1,
+			area: 120,
+			descricao: 'Apartamento JARDINS com: 120.00 m² de área útil, 3 dormitórios, mobília, 1 vaga de garagem.',
+			detalhes: ['Mobília']
+		},
+		{
+			referencia: '334562',
+			finalidade: 'Venda',
+			tipo: 'Apartamento',
+			condominio: 3010,
+			bairro: 'Jardim Paulista',
+			preco_venda: 4500000,
+			preco_locacao: 0,
+			fotos: [
+				'http://www.angloamericana.com.br/img/arquivoanexo/334562_0.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/334562_1.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/334562_2.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/334562_3.jpg'
+			],
+			suites: 1,
+			dormitorios: 3,
+			vagas: 5,
+			area: 345,
+			descricao: 'Apartamento JARDIM PAULISTA com: 345.00 m² de área útil, 3 dormitórios ( sendo 1 suíte ), wc empregados, copa, armário embutido, despensa, sala de jantar, sala intima, closet. Condomínio com: recuo, 5 vagas de garagem.',
+			detalhes: ['Armário Embutido', 'Closet', 'Copa', 'Despensa', 'Sala de Jantar', 'Sala Íntima', 'WC Empregados', 'Recuo']
+		}
+	]
+
+	// Single Imovel Data
+	$scope.imovel = $scope.imoveisBusca[window.location.hash.substr(1)];
+
+	// Bairros Data
 	$scope.bairros = [
 		'Vila Nova Conceição',
 		'Moema',
@@ -155,9 +380,13 @@ angular.module('anglo', [])
 		'Vila Madalena',
 		'Outros'
 	];
+
+	// Home - Abrir div Encontre seu Imóvel
 	$scope.toggleEncontreBtn = function() {
 		$('#home-banner-buttons, #busca-imovel').toggleClass('on');
 	}
+
+	// Home - Busca de Imóveis - Manter preço máximo maior que preço mínimo
 	$scope.changePrecoMin = function() {
 		if ($scope.precoMax <= $scope.precoMin && $scope.precoMax != undefined) {
 			$scope.precoMax = $scope.precoMin + 500;
@@ -167,145 +396,45 @@ angular.module('anglo', [])
 		if ($scope.precoMax <= $scope.precoMin && $scope.precoMin != undefined && $scope.precoMax != undefined) {
 			$scope.precoMax = $scope.precoMin + 500;
 		};
-		
 	}
 
+	// Home - Busca de Imóveis - UI
 	$( ".btn-group .btn-default " ).click(function() {
 		$(this).siblings().removeClass('selected')
 	  	$(this).toggleClass('selected');
 	});
-
 	$( "label.busca-check-label" ).click(function() {
 	  	$(this).addClass('selected');
 	});
 
+	// Abrir Popup Cadastro de Imóveis
 	$scope.cadastreToggle = function() {
 	  	$('#cadastre-wrapper').toggleClass('on');
 	}
 
+	// Busca Imoveis - Single Imovel - Toggle Estrela de Favoritos
+	$scope.addFav = function($event) {
+		console.log($event)
+		angular.element($event.target).toggleClass('fa-star-o').toggleClass('fa-star')
+	}
+
+	// Favoritos - Insere texto quando não há imóveis em Favoritos
+	$scope.removeFav = function($event) {
+		angular.element($event.currentTarget).parent().remove()
+		if (! $(".slider-container")[0]){
+		    $( "<div class='col-md-12'><div class='spacer' style='height: 15px'></div><p>Você não adicionou nenhum imóvel como favorito.<br>Clique no ícone da estrela (<i class='fa fa-star'></i>) em um imóvel para adicioná-lo aos favoritos.</p></div>" ).appendTo( "#imoveis-wrapper .row" );
+		}
+	}
+
+
+	// Botão Voltar
+	$scope.lastLink = function() {
+		if (document.referrer.indexOf(window.location.host) !== -1) {
+			history.go(-1); 
+			return false; 
+		} else { 
+			window.location.href = '/';
+		}
+	} 
 
 }])
-
-// Smooth Scroll
-
-// Select all links with hashes
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 200, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
-    }
-  });
-
-
-var logoLine = new Vivus('svglogo', {
-	file: 'img/logoline.svg',
-	duration: 80,
-	onReady: function (myVivus) {
-		
-	}
-});
-
-$('#way-1, #way-2, #way-3').waypoint(function(direction) {
-	if (direction == 'up') {};
-    $(this).removeClass('off')
-    $(this).siblings('.section-div').addClass('off')
-}, {
-  offset: 15
-})
-$('#way-1').waypoint(function(direction) {
-	if (direction == 'up') {};
-    $('#title-1').addClass('on')
-    $('#title-1').siblings('h2').removeClass('on')
-    $('#servicos-wrapper').removeClass('bgblue')
-
-
-}, {
-  offset: 15
-})
-$('#way-2').waypoint(function(direction) {
-	if (direction == 'up') {};
-    $('#title-2').addClass('on');
-    $('#title-2').siblings('h2').removeClass('on');
-    $('#servicos-wrapper').addClass('bgblue');
-}, {
-  offset: 15
-})
-$('#way-3').waypoint(function(direction) {
-	if (direction == 'up') {};
-    $('#title-3').addClass('on');
-    $('#title-3').siblings('h2').removeClass('on');
-    $('#servicos-wrapper').removeClass('bgblue');
-
-}, {
-  offset: 15
-})
-
-$('#way-1, #way-2, #way-3').waypoint(function(direction) {
-	if (direction == 'down') {};
-    $(this).removeClass('off');
-    $(this).siblings('.section-div').addClass('off');
-}, {
-  offset: '40%'
-})
-$('#way-1').waypoint(function(direction) {
-	if (direction == 'down') {};
-    $('#title-1').addClass('on');
-    $('#title-1').siblings('h2').removeClass('on');
-    $('#servicos-wrapper').removeClass('bgblue');
-}, {
-  offset: '40%'
-})
-$('#way-2').waypoint(function(direction) {
-	if (direction == 'down') {};
-    $('#title-2').addClass('on');
-    $('#title-2').siblings('h2').removeClass('on');
-    $('#servicos-wrapper').addClass('bgblue');
-    logoLine.play();
-}, {
-  offset: '40%'
-})
-$('#way-3').waypoint(function(direction) {
-	if (direction == 'down') {};
-    $('#title-3').addClass('on');
-    $('#title-3').siblings('h2').removeClass('on');
-    $('#servicos-wrapper').removeClass('bgblue');
-}, {
-  offset: '40%'
-})
-
-
-$(function(){
-	$('.map').on('click', function(){
-		$(this).addClass('interact');
-	});
-});
-

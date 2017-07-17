@@ -1,5 +1,4 @@
 <?php include 'header.php' ?>
-	
 <div class="spacer hidden-xs" style="height: 30px;"></div>
 <div class="container">
 	<div class="row">
@@ -12,8 +11,8 @@
 			fale@angloamericana.com.br<br>
 			CRECI 6975J</p>
 			<ul class="list-inline">
-				<li><h4><i class="fa fa-facebook-square blue" aria-hidden="true"></i> Facebook</h4></li>
-				<li><h4><i class="fa fa-linkedin-square blue" aria-hidden="true"></i> Linkedin</h4></li>
+				<li><a href="https://www.facebook.com/AngloAmericana" target="_blank"><h4><i class="fa fa-facebook-square blue" aria-hidden="true"></i> Facebook</h4></a></li>
+				<li><a href="https://www.linkedin.com/company/9412965" target="_blank"><h4><i class="fa fa-linkedin-square blue" aria-hidden="true"></i> Linkedin</h4></a></li>
 			</ul>
 		</div>
 		<div class="col-sm-6 col-md-6">
@@ -38,9 +37,9 @@
 			</form>
 		</div>
 	</div>
-</div>
+</div> <!-- container end -->
 
-	<div class="map">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.365202289865!2d-46.66479569999999!3d-23.591231999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59fbeeb906e9%3A0x654c32f387aa9188!2sAv.+Rep%C3%BAblica+do+L%C3%ADbano%2C+1190+-+Moema%2C+S%C3%A3o+Paulo+-+SP%2C+04502-001%2C+Brazil!5e0!3m2!1sen!2sin!4v1434611392942" height="400" frameborder="0" allowfullscreen></iframe>
-	</div>
+<div class="map">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.365202289865!2d-46.66479569999999!3d-23.591231999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59fbeeb906e9%3A0x654c32f387aa9188!2sAv.+Rep%C3%BAblica+do+L%C3%ADbano%2C+1190+-+Moema%2C+S%C3%A3o+Paulo+-+SP%2C+04502-001%2C+Brazil!5e0!3m2!1sen!2sin!4v1434611392942" height="400" frameborder="0" allowfullscreen></iframe>
+</div>
 <?php include 'footer.php' ?>

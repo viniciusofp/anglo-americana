@@ -33,12 +33,15 @@ input[type="checkbox"], input[type="radio"] {
   width: 15px;
   margin: 5px; }
 
+textarea {
+  max-width: 100%; }
+
 textarea, input, button {
   outline: none !important; }
 
 h1 {
   font-size: 2em;
-  line-height: 1.25; }
+  line-height: 1.4; }
   @media (min-width: 43.75em) {
     h1 {
       font-size: 2.3em;
@@ -50,7 +53,7 @@ h1 {
 
 h2 {
   font-size: 1.625em;
-  line-height: 1.15384615; }
+  line-height: 1.3; }
   @media (min-width: 992px) {
     h2 {
       font-size: 2em;
@@ -62,7 +65,7 @@ h2 {
 
 h3 {
   font-size: 1.375em;
-  line-height: 1.13636364; }
+  line-height: 1.2; }
   @media (min-width: 992px) {
     h3 {
       font-size: 1.5em;
@@ -74,10 +77,24 @@ h3 {
 
 h4 {
   font-size: 1.125em;
-  line-height: 1.11111111; }
+  line-height: 1.2; }
   @media (min-width: 43.75em) {
     h4 {
       line-height: 1.22222222; } }
+
+#scrollTop {
+  position: fixed;
+  cursor: pointer;
+  bottom: 30px;
+  right: 30px;
+  font-size: 42px;
+  color: white;
+  transition: 0.2s; }
+  @media all and (max-width: 850px) {
+    #scrollTop {
+      display: none; } }
+  #scrollTop:hover {
+    color: #ccc; }
 
 .blue {
   color: #001e5b; }
@@ -89,13 +106,15 @@ h4 {
   background-color: #9e292e;
   color: white; }
 
-.inline-col {
-  display: inline;
-  float: left; }
-
 .section-title {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   text-align: center; }
+
+.foto-trigger {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center; }
 
 .tooltip.bottom > .tooltip-inner {
   background-color: #9e292e;
@@ -125,7 +144,6 @@ h4 {
       float: none !important;
       text-align: right; } }
   #toprow a {
-    color: #f0f0f0;
     font-weight: bold;
     padding: 4px 0 4px 15px; }
     #toprow a:hover {
@@ -183,14 +201,10 @@ h4 {
     #footer-container {
       text-align: center; } }
 
-#footer-toprow {
-  background: #001e5b;
-  color: #f1f1f1; }
-
 #home-banner {
   position: relative;
   margin-top: -24px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   height: 700px;
   width: 100%;
   background-image: url("../img/ibirapuera.jpg");
@@ -305,6 +319,78 @@ h4 {
     #encontre-close i:hover {
       opacity: 1; }
 
+#sidebar-busca-imovel {
+  margin-top: 20px;
+  background: #ededed;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 1px solid #ccc;
+  transition: 0.5s cubic-bezier(0.17, 0.67, 0.55, 0.9);
+  transform-origin: center bottom; }
+  #sidebar-busca-imovel #bairro-box {
+    height: 210px;
+    overflow: scroll;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px; }
+  #sidebar-busca-imovel > div:last-child {
+    margin-top: 15px; }
+  #sidebar-busca-imovel input.busca-check:checked + span {
+    color: #9e292e; }
+  #sidebar-busca-imovel li {
+    font-size: 14px;
+    padding: 0; }
+  #sidebar-busca-imovel .btn-group .btn-default.selected {
+    background: #bbb;
+    color: #9e292e;
+    font-weight: 700; }
+  #sidebar-busca-imovel .tipo .btn-default {
+    width: 50%; }
+  #sidebar-busca-imovel .btn-toolbar .btn-group {
+    width: 100%; }
+    #sidebar-busca-imovel .btn-toolbar .btn-group .btn-default {
+      width: 20%; }
+
+#imoveis-wrapper.busca .slider-container {
+  margin-top: 5px; }
+#imoveis-wrapper.busca p small a {
+  color: #9e292e; }
+  #imoveis-wrapper.busca p small a:hover, #imoveis-wrapper.busca p small a:focus, #imoveis-wrapper.busca p small a:active, #imoveis-wrapper.busca p small a:visited {
+    font-weight: 600; }
+#imoveis-wrapper.busca .fav {
+  margin: 10px;
+  color: white;
+  font-size: 24px;
+  z-index: 99999;
+  position: absolute;
+  display: block;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: crosshair; }
+
+.pagination > li > a, .pagination > li > span {
+  color: #001e5b;
+  font-weight: 600; }
+
+.pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
+  color: #9e292e;
+  background: #ccc; }
+
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus {
+  background: #ededed;
+  color: #9e292e;
+  font-weight: 800;
+  border: none; }
+
+#fav-sidebar {
+  background: #ededed;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  margin-top: 10px; }
+
 #cadastre-wrapper {
   display: none;
   position: fixed;
@@ -360,11 +446,155 @@ h4 {
     #cadastre-close i:hover {
       opacity: 1; }
 
+.sss {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: block;
+  overflow: hidden; }
+
 .ssslide {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  overflow: hidden; }
+
+.ssslide img {
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: block; }
+
+.sssnext, .sssprev {
+  width: 25px;
+  height: 100%;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  background: url("images/arr.png") no-repeat; }
+
+.sssprev {
+  left: 3%;
+  background-position: 0 50%; }
+
+.sssnext {
+  right: 3%;
+  background-position: -26px 50%; }
+
+.sssprev:hover, .sssnext:hover {
+  cursor: pointer; }
+
+#imoveis-wrapper .btn.btn-warning {
+  color: #9e292e;
+  background-color: #ffffff;
+  border-color: #8a2428;
+  padding: 3px 8px; }
+  #imoveis-wrapper .btn.btn-warning:hover {
+    color: white;
+    background-color: #8a2428; }
+#imoveis-wrapper.home .ssslide {
+  height: 300px; }
+#imoveis-wrapper.busca .ssslide {
+  height: 240px; }
+#imoveis-wrapper .ssslide {
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 300px; }
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc; }
+#imoveis-wrapper .slider-container {
+  margin-bottom: 30px;
+  transition: 0.2s;
+  border-radius: 5px; }
+  #imoveis-wrapper .slider-container h3, #imoveis-wrapper .slider-container h4 {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ededed;
+    margin-top: 6px;
+    margin-bottom: 0; }
+#imoveis-wrapper .list-inline {
+  margin: 0;
+  padding: 5px 0 12px;
+  border: 1px solid #ccc;
+  text-align: center; }
+  #imoveis-wrapper .list-inline:hover {
+    background: #ededed; }
+
+#home-empresa {
+  background-image: url("../img/ibirared.jpg");
+  background-size: cover;
+  background-position: center; }
+
+#imovel-wrapper h3 {
+  margin-bottom: 0;
+  margin-top: 10px; }
+#imovel-wrapper .btn.btn-warning {
+  color: #9e292e;
+  background-color: #ffffff;
+  border-color: #8a2428;
+  padding: 3px 8px; }
+  #imovel-wrapper .btn.btn-warning:hover {
+    color: white;
+    background-color: #8a2428; }
+#imovel-wrapper .ssslide {
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 500px;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc; }
+  @media all and (max-width: 767px) {
+    #imovel-wrapper .ssslide {
+      height: 360px; } }
+#imovel-wrapper .slider-container {
+  margin-bottom: 5px;
+  transition: 0.2s;
+  border-radius: 5px; }
+  #imovel-wrapper .slider-container h3, #imovel-wrapper .slider-container h4 {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ededed;
+    margin-top: 6px;
+    margin-bottom: 0; }
+#imovel-wrapper ul {
+  margin-bottom: 5px; }
+#imovel-wrapper dl {
+  border-top: 5px solid #9e292e;
+  background-color: white;
+  padding-top: 15px;
+  margin-top: 15px; }
+
+#detalhes-contato {
+  background: #ededed;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  margin-top: 10px; }
+
+.detalhes.list-inline > li {
+  display: inline-block;
+  padding: 3px 7px;
+  background: #ededed;
+  margin: 5px;
+  border-radius: 5px; }
+
+#bubbleMap {
+  margin-bottom: 15px; }
+
+#imovelOptions a {
+  color: #888; }
+#imovelOptions a.red {
+  color: #9e292e; }
+#imovelOptions a:hover {
+  color: #001e5b; }
 
 #servicos-left div {
   position: fixed;
@@ -457,8 +687,7 @@ h4 {
   min-height: 498px; }
   #carousel-quotes-wrapper .carousel-control {
     background: transparent !important;
-    top: 50%;
-    transform: translate(0, -50%); }
+    top: 100px; }
   #carousel-quotes-wrapper .carousel-inner blockquote {
     border: none; }
   #carousel-quotes-wrapper .carousel-inner .item {
