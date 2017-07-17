@@ -12,7 +12,7 @@ Para deixar mais organizado, separei o código dos popups **Cadastre seu imóvel
 - [**Angular JS**](https://docs.angularjs.org/api): UI e Data Binding
 - [**Vivus JS e Pathformer**](https://maxwellito.github.io/vivus/): Animação SVG nas páginas Serviços e Relocation
 - [**Waypoints**](http://imakewebthings.com/waypoints/): Animação CSS com Scroll nas páginas Serviços e Relocation
-- [**Super Simple Slider](http://supersimpleslider.com/): Slider fotos de Imóveis
+- [**Super Simple Slider**](http://supersimpleslider.com/): Slider fotos de Imóveis
 
 ## Angular JS
 
