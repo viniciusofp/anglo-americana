@@ -1,6 +1,14 @@
 # Anglo Americana Imóveis
 
+## Angular JS
+
 Usei a framework **Angular JS** para fazer a Interface de Usuário e para mimetizar o banco de dados, evitando a repetição de HTML em loops e facilitando a reprodução de páginas de diferentes imóveis.
+
+O código em Angular está no arquivo **js/app.js**.
+
+### Loops e variáveis
+
+Criei arranjos em JSON para mimetizar o banco de dados, eles estão no início do Controller em js/app.js.
 
 Os loops usam a diretiva do Angular **ng-repeat**, como no exemplo (resultados-de-busca.php):
 
@@ -32,4 +40,4 @@ Os loops usam a diretiva do Angular **ng-repeat**, como no exemplo (resultados-d
 
 O código acima, praticamente igual ao das páginas favoritos.php e index.php, contém dois loops: um externo que lista os imóveis e um interno que lista as fotos do imóvel.
 
-As informações de imóvel provenientes do bando de dados estão no formato {{imovel.area}}.
+As informações de imóvel provenientes do bando de dados estão no formato **{{imovel.area}}**.
