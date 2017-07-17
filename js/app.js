@@ -1,19 +1,19 @@
 // Iniciate App
-
 angular.module('anglo', [])
 
 // Troca formatação de moedas para padrão brasileiro
-
 .config(['$provide', function($provide) {
-        $provide.decorator('$locale', ['$delegate', function($delegate) {
-            $delegate.NUMBER_FORMATS.DECIMAL_SEP = ',';
-            $delegate.NUMBER_FORMATS.GROUP_SEP = '.';
-            return $delegate;
-        }]);
-    }])
+    $provide.decorator('$locale', ['$delegate', function($delegate) {
+        $delegate.NUMBER_FORMATS.DECIMAL_SEP = ',';
+        $delegate.NUMBER_FORMATS.GROUP_SEP = '.';
+        return $delegate;
+    }]);
+}])
+
 /*
 	Directives
 */
+
 // Cadastre Seu Imóvel
 .directive('cadastre', function() {
   return {
@@ -43,19 +43,14 @@ angular.module('anglo', [])
   };
 })
 
-// Imoveis Data
-
-
-
 /*
 	Controllers
 */
 
 // Main Controller
-
 .controller('main', ['$scope', function($scope) {
 
-	// Imóveis em Destaque Data
+// Imóveis em Destaque Data
 	$scope.imoveisDestaque = [
 		{
 			referencia: '350680',
@@ -145,7 +140,7 @@ angular.module('anglo', [])
 		}
 	]
 
-	// Resultados da Busca Data
+// Resultados da Busca Data
 	$scope.imoveisBusca = [
 		{
 			referencia: '350680',
@@ -361,10 +356,10 @@ angular.module('anglo', [])
 		}
 	]
 
-	// Single Imovel Data
+// Single Imovel Data
 	$scope.imovel = $scope.imoveisBusca[window.location.hash.substr(1)];
 
-	// Bairros Data
+// Bairros Data
 	$scope.bairros = [
 		'Vila Nova Conceição',
 		'Moema',
@@ -393,12 +388,12 @@ angular.module('anglo', [])
 		'Outros'
 	];
 
-	// Home - Abrir div Encontre seu Imóvel
+// Home - Abrir div Encontre seu Imóvel
 	$scope.toggleEncontreBtn = function() {
 		$('#home-banner-buttons, #busca-imovel').toggleClass('on');
 	}
 
-	// Home - Busca de Imóveis - Manter preço máximo maior que preço mínimo
+// Home - Busca de Imóveis - Manter preço máximo maior que preço mínimo
 	$scope.changePrecoMin = function() {
 		if ($scope.precoMax <= $scope.precoMin && $scope.precoMax != undefined) {
 			$scope.precoMax = $scope.precoMin + 500;
@@ -410,7 +405,7 @@ angular.module('anglo', [])
 		};
 	}
 
-	// Home - Busca de Imóveis - UI
+// Home - Busca de Imóveis - UI
 	$( ".btn-group .btn-default " ).click(function() {
 		$(this).siblings().removeClass('selected')
 	  	$(this).toggleClass('selected');
@@ -419,18 +414,17 @@ angular.module('anglo', [])
 	  	$(this).addClass('selected');
 	});
 
-	// Abrir Popup Cadastro de Imóveis
+// Abrir Popup Cadastro de Imóveis
 	$scope.cadastreToggle = function() {
 	  	$('#cadastre-wrapper').toggleClass('on');
 	}
 
-	// Busca Imoveis - Single Imovel - Toggle Estrela de Favoritos
+// Busca Imoveis - Single Imovel - Toggle Estrela de Favoritos
 	$scope.addFav = function($event) {
-		console.log($event)
 		angular.element($event.target).toggleClass('fa-star-o').toggleClass('fa-star')
 	}
 
-	// Favoritos - Insere texto quando não há imóveis em Favoritos
+// Favoritos - Insere texto quando não há imóveis em Favoritos
 	$scope.removeFav = function($event) {
 		angular.element($event.currentTarget).parent().remove()
 		if (! $(".slider-container")[0]){
@@ -438,8 +432,7 @@ angular.module('anglo', [])
 		}
 	}
 
-
-	// Botão Voltar
+// Botão Voltar
 	$scope.lastLink = function() {
 		if (document.referrer.indexOf(window.location.host) !== -1) {
 			history.go(-1); 
@@ -448,5 +441,4 @@ angular.module('anglo', [])
 			window.location.href = '/';
 		}
 	} 
-
 }])
