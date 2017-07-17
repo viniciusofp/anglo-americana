@@ -25,9 +25,11 @@ O código em Angular está no arquivo **js/app.js**.
 
 ### "Back-End"
 
-Para desenvolver rapidamente o template e não fazer muito trabalho que precisaria ser refeito, usei algumas funcões do Angular, **$scope**, **ng-repeat** e **ng-if**. Esse código deverá ser substituído por PHP. **No app.js, deve-se preservar o que está marcado como UI e excluir o que está marcado como DATA.**
+Para desenvolver rapidamente o template e não fazer muito trabalho que precisaria ser refeito, usei algumas funcões do Angular, **$scope**, **ng-repeat** e **ng-if**. 
 
-Criei arranjos em JSON para servir como banco de dados, eles estão no início do Controller.
+Criei arranjos em JSON para servir como banco de dados fake, eles estão no início do Controller.
+
+** Esse código deverá ser substituído por PHP. No app.js, deve-se preservar o que está marcado como UI e excluir o que está marcado como DATA.**
 
 #### Loops e variáveis
 
