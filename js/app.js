@@ -50,7 +50,7 @@ angular.module('anglo', [])
 // Main Controller
 .controller('main', ['$scope', function($scope) {
 
-// Imóveis em Destaque Data
+// DATA - Imóveis em Destaque
 	$scope.imoveisDestaque = [
 		{
 			referencia: '350680',
@@ -140,7 +140,7 @@ angular.module('anglo', [])
 		}
 	]
 
-// Resultados da Busca Data
+// DATA - Resultados da Busca
 	$scope.imoveisBusca = [
 		{
 			referencia: '350680',
@@ -356,10 +356,10 @@ angular.module('anglo', [])
 		}
 	]
 
-// Single Imovel Data
+// DATA - Single Imovel
 	$scope.imovel = $scope.imoveisBusca[window.location.hash.substr(1)];
 
-// Bairros Data
+// DATA - Bairros
 	$scope.bairros = [
 		'Vila Nova Conceição',
 		'Moema',
@@ -388,12 +388,12 @@ angular.module('anglo', [])
 		'Outros'
 	];
 
-// Home - Abrir div Encontre seu Imóvel
+// UI - Home - Abrir div Encontre seu Imóvel
 	$scope.toggleEncontreBtn = function() {
 		$('#home-banner-buttons, #busca-imovel').toggleClass('on');
 	}
 
-// Home - Busca de Imóveis - Manter preço máximo maior que preço mínimo
+// UI - Home - Busca de Imóveis - Manter preço máximo maior que preço mínimo
 	$scope.changePrecoMin = function() {
 		if ($scope.precoMax <= $scope.precoMin && $scope.precoMax != undefined) {
 			$scope.precoMax = $scope.precoMin + 500;
@@ -405,7 +405,7 @@ angular.module('anglo', [])
 		};
 	}
 
-// Home - Busca de Imóveis - UI
+// UI - Home - Busca de Imóveis
 	$( ".btn-group .btn-default " ).click(function() {
 		$(this).siblings().removeClass('selected')
 	  	$(this).toggleClass('selected');
@@ -414,17 +414,17 @@ angular.module('anglo', [])
 	  	$(this).addClass('selected');
 	});
 
-// Abrir Popup Cadastro de Imóveis
+// UI - Abrir Popup Cadastro de Imóveis
 	$scope.cadastreToggle = function() {
 	  	$('#cadastre-wrapper').toggleClass('on');
 	}
 
-// Busca Imoveis - Single Imovel - Toggle Estrela de Favoritos
+// UI - Busca Imoveis - Single Imovel - Toggle Estrela de Favoritos
 	$scope.addFav = function($event) {
 		angular.element($event.target).toggleClass('fa-star-o').toggleClass('fa-star')
 	}
 
-// Favoritos - Insere texto quando não há imóveis em Favoritos
+// UI - Favoritos - Insere texto quando não há imóveis em Favoritos
 	$scope.removeFav = function($event) {
 		angular.element($event.currentTarget).parent().remove()
 		if (! $(".slider-container")[0]){
@@ -432,7 +432,7 @@ angular.module('anglo', [])
 		}
 	}
 
-// Botão Voltar
+// UI - Botão Voltar
 	$scope.lastLink = function() {
 		if (document.referrer.indexOf(window.location.host) !== -1) {
 			history.go(-1); 

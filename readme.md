@@ -1,5 +1,7 @@
 # Anglo Americana Imóveis
 
+Documentação do desenvolvimento de template para novo site da Anglo Americana Imóveis.
+
 ## Estrutura
 
 Mantive os mesmos nomes dos arquivos e pastas do site atual. Busquei deixar o código o mais enxuto possível e coloquei comentários em todos arquivos para facilitar a identificação de cada elemento das páginas.
@@ -21,9 +23,14 @@ Usei a framework **Angular JS** para fazer a Interface de Usuário e para mimeti
 
 O código em Angular está no arquivo **js/app.js**.
 
-### Loops e variáveis
+### "Back-End"
 
-Criei arranjos em JSON para mimetizar o banco de dados, eles estão no início do Controller em js/app.js.
+Para desenvolver rapidamente o template e não fazer muito trabalho que precisaria ser refeito, usei algumas funcões do Angular, **$scope**, **ng-repeat** e **ng-if**. Esse código deverá ser substituído por PHP. **No app.js, deve-se preservar o que está marcado como UI e excluir o que está marcado como DATA.**
+
+Criei arranjos em JSON para servir como banco de dados, eles estão no início do Controller.
+
+#### Loops e variáveis
+
 
 Os loops usam a diretiva do Angular **ng-repeat**, como no exemplo (resultados-de-busca.php):
 
@@ -53,6 +60,61 @@ Os loops usam a diretiva do Angular **ng-repeat**, como no exemplo (resultados-d
 <div ng-repeat-end ng-if="($index + 1) % 2 == 0" class="clearfix"></div>
 ```
 
-O código acima, praticamente igual ao das páginas favoritos.php e index.php, contém dois loops: um externo que lista os imóveis e um interno que lista as fotos do imóvel.
+O código acima, praticamente igual ao das páginas **favoritos.php** e **index.php**, contém dois loops: um externo que lista os imóveis e um interno que lista as fotos do imóvel.
 
-As informações de imóvel provenientes do bando de dados estão no formato **{{imovel.area}}**.
+As informações de imóvel provenientes do bando de dados estão entre duas chaves, como **{{imovel.area}}**.
+
+#### Condicionais
+
+Inseri algumas condicionais com a diretiva **ng-if**, como nesse trecho do exemplo acima:
+
+```
+<div ng-repeat-end ng-if="($index + 1) % 2 == 0" class="clearfix"></div>
+```
+
+Ele adiciona um div com a tag clearfix a cada dois posts, para manter a grid alinhada.
+
+Também usei a **ng-if** para evitar mostrar dados que possam não estar preenchidos no DB, como nos Detalhes de Imóvel (detalhes.php):
+
+```
+<h5 class="blue">DETALHES DO IMÓVEL</h5>
+<dl class="dl-horizontal">
+  <dt>Referência</dt>
+  <dd>{{imovel.referencia}}</dd>
+  <dt>Finalidade</dt>
+  <dd>{{imovel.finalidade}}</dd>
+  <dt>Bairro</dt>
+  <dd>{{imovel.bairro}}</dd>
+  <dt>Tipo de Imóvel</dt>
+  <dd>{{imovel.tipo}}</dd>
+  <dt ng-if="imovel.preco_venda != 0">Preço Venda</dt>
+  <dd ng-if="imovel.preco_venda != 0"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif">{{imovel.preco_venda | currency:"R$ "}}</span></dd>
+  <dt ng-if="imovel.preco_locacao != 0">Preço Locação</dt>
+  <dd ng-if="imovel.preco_locacao != 0"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif">{{imovel.preco_locacao | currency:"R$ "}}</span></dd>
+  <dt ng-if="imovel.condominio != 0">Condomínio</dt>
+  <dd ng-if="imovel.condominio != 0"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif">{{imovel.condominio | currency:"R$ "}}</span></dd>
+  <dt>Quartos</dt>
+  <dd>{{imovel.dormitorios}}</dd>
+  <dt ng-if="imovel.suites != 0">Suítes</dt>
+  <dd ng-if="imovel.suites != 0">{{imovel.suites}}</dd>
+  <dt ng-if="imovel.preco_vagas != 0">Vagas</dt>
+  <dd ng-if="imovel.preco_vagas != 0">{{imovel.vagas}}</dd>
+  <dt>Área</dt>
+  <dd>{{imovel.area}} m<sup>2</sup></dd>
+</dl>
+```
+
+#### URLs
+
+Usei um truque pra simular as páginas de diferentes imóveis, colocando o index de cada item do loop na location hash da URL (index.php, favoritos.php, resultados-de-busca.php):
+
+```
+<a  href="detalhes.php#{{$index}}"> . . . </a>
+```
+
+E definindo o imóvel a partir desse index no arranjo de imóveis (app.js):
+
+```
+	$scope.imovel = $scope.imoveisBusca[window.location.hash.substr(1)];
+```
+
