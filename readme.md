@@ -29,3 +29,7 @@ Os loops usam a diretiva do Angular **ng-repeat**, como no exemplo (resultados-d
 </div>
 <div ng-repeat-end ng-if="($index + 1) % 2 == 0" class="clearfix"></div>
 ```
+
+O código acima, praticamente igual ao das páginas favoritos.php e index.php, contém dois loops: um externo que lista os imóveis e um interno que lista as fotos do imóvel.
+
+As informações de imóvel provenientes do bando de dados estão no formato {{imovel.area}}.
