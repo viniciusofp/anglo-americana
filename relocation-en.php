@@ -2,7 +2,7 @@
 <div id="servicos-wrapper" class="container-fluid">
 	<script>
 		var showlogo = true;
-		var isrelocation_br = true;
+		var isrelocation_br = false;
 	</script>
 	<object id="svglogo"></object>
 	<div class="container">
