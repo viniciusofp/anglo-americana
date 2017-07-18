@@ -1,5 +1,9 @@
 <?php include 'header.php' ?>
 <div id="servicos-wrapper" class="container-fluid">
+	<script>
+		var showlogo = true;
+		var isrelocation_br = true;
+	</script>
 	<object id="svglogo"></object>
 	<div class="container">
 		<div class="row">

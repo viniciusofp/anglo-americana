@@ -1,6 +1,9 @@
 <?php include 'header.php' ?>
 <div id="servicos-wrapper" class="container-fluid">
-	<script>var showlogo = true;</script>
+	<script>
+		var showlogo = true;
+		var isrelocation_br = true;
+	</script>
 	<object id="svglogo"></object>
 	<div class="container">
 		<div class="row">
@@ -96,7 +99,4 @@
 <div id="scrollTop" onclick="$(window).scrollTop(0);">
 	<i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
 </div>
-<script>
-var isrelocation_br = true;
-</script>
 <?php include 'footer.php' ?>

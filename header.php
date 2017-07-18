@@ -26,7 +26,7 @@
             <i id="ligamos-trigger" class="fa fa-phone" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Ligamos pra você"></i>
             <i id="enviamosemail-trigger" class="fa fa-envelope" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Enviamos um email pra você"></i>
             <a href="https://www.facebook.com/AngloAmericana/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <p class="pull-right"><a id="gotoenglish" href="" data-toggle="tooltip" data-placement="bottom" data-html="true" title='<img src="images/english.png" alt="" style="width: 19px; margin-top: -3px; margin-right: 3px;"> Translate this page'> English</a> <a href=""  data-toggle="tooltip" data-placement="bottom" title="English | Español | Italiano Français | Deutsch | 日本語">Multilingual Staff</a></p>
+            <p class="pull-right"><a id="gotoenglish" href="relocation-en.php" data-toggle="tooltip" data-placement="bottom" data-html="true" title='<img src="images/english.png" alt="" style="width: 19px; margin-top: -3px; margin-right: 3px;"> Translate this page'> English</a> <a href=""  data-toggle="tooltip" data-placement="bottom" title="English | Español | Italiano Français | Deutsch | 日本語">Multilingual Staff</a></p>
     				<p class="pull-right hidden-xs hidden-sm">Tel: (11) 3887-4555</p>
     			</div>
     		</div>
