@@ -108,7 +108,9 @@ Também usei a **ng-if** para evitar mostrar dados que possam não estar preench
 
 #### URLs
 
-Usei um truque pra simular as páginas de diferentes imóveis, colocando o index de cada item do loop na location hash da URL (index.php, favoritos.php, resultados-de-busca.php):
+Só pra constar:
+
+Usei um truque pra simular as páginas de diferentes imóveis, colocando o index de cada item do loop na location hash da URL (index.php, favoritos.php, resultados-de-busca.php). Assim evitei que todos links levassem pro mesmo imóvel ou criar várias páginas estáticas:
 
 ```
 <a  href="detalhes.php#{{$index}}"> . . . </a>
@@ -120,5 +122,15 @@ E definindo o imóvel a partir desse index no arranjo de imóveis (app.js):
 $scope.imovel = $scope.imoveisBusca[window.location.hash.substr(1)];
 ```
 
-Assim evitei que todos links levassem pro mesmo imóvel ou criar várias páginas estáticas.
+## SASS
+
+```
+  - css/style.scss
+  - css/style.css
+```
+
+O CSS é preprocessado com usando [**SASS**](http://sass-lang.com/), o arquivo original é o css/style.**sccs** que é compilado no style.**css**.
+
+É preferível não fazer edições diretamente no arquivo css.
+
 
