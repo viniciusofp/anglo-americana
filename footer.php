@@ -199,6 +199,18 @@
 		  offset: '100%'
 		})
 
+// Relocation - Toogle tooltip #gotoenglish quando está na página de Relocation em Português
+$(function(){
+	if (isrelocation_br) {
+		setTimeout(function(){ 
+			$('#gotoenglish').tooltip('show')
+		}, 1000);
+		setTimeout(function(){ 
+			$('#gotoenglish').tooltip('hide')
+		}, 6000);
+		
+	};
+});
 
 	</script>
 	</body>

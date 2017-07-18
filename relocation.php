@@ -96,4 +96,7 @@
 <div id="scrollTop" onclick="$(window).scrollTop(0);">
 	<i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
 </div>
+<script>
+var isrelocation_br = true;
+</script>
 <?php include 'footer.php' ?>
