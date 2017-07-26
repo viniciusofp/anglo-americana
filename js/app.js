@@ -51,94 +51,49 @@ angular.module('anglo', [])
 .controller('main', ['$scope', function($scope) {
 
 // DATA - Imóveis em Destaque
-	$scope.imoveisDestaque = [
-		{
-			referencia: '350680',
-			finalidade: 'Venda',
-			tipo: 'Cobertura',
-			condominio: 3800,
-			bairro: 'Paraíso',
-			preco_venda: 3800000,
-			preco_locacao: 22000,
-			fotos: [
-				'http://www.angloamericana.com.br/img/arquivoanexo/350680_0.jpg',
-				'http://www.angloamericana.com.br/img/arquivoanexo/350680_1.jpg',
-				'http://www.angloamericana.com.br/img/arquivoanexo/350680_2.jpg',
-				'http://www.angloamericana.com.br/img/arquivoanexo/350680_3.jpg',
-				'http://www.angloamericana.com.br/img/arquivoanexo/350680_4.jpg'
-			],
-			suites: 3,
-			dormitorios: 4,
-			vagas: 4,
-			area: 285,
-			descricao: 'Cobertura decorada com muito bom gosto , pode ser locada também sem os móveis, no Paraíso, piscina e academia privativas , pronta para morar com muito conforto e lazer , ar condicionado em 285.00 m com 4 dts sendo 3 suítes, 4 vagas.',
-			detalhes: []
-		},
-		{
-			referencia: '181170',
-			finalidade: 'Venda',
-			tipo: 'Apartamento',
-			condominio: 1270,
-			bairro: 'Vila Nova Conceição',
-			preco_venda: 920000,
-			preco_locacao: 5600,
-			fotos: [
-				'http://www.angloamericana.com.br/img/arquivoanexo/181170_0.jpg',
-				'http://www.angloamericana.com.br/img/arquivoanexo/181170_1.jpg',
-				'http://www.angloamericana.com.br/img/arquivoanexo/181170_2.jpg',
-				'http://www.angloamericana.com.br/img/arquivoanexo/181170_3.jpg',
-			],
-			suites: 1,
-			dormitorios: 1,
-			vagas: 1,
-			area: 48,
-			descricao: 'Apartamento VILA NOVA CONCEIÇÃO com: 48.00 m² de área útil, 1 dormitório ( sendo 1 suíte ), mobília, 1 vaga de garagem.',
-			detalhes: ['Mobília']
-		},
-		{
-			referencia: '340672',
-			finalidade: 'Venda',
-			tipo: 'Casa',
-			condominio: 0,
-			bairro: 'Jardim Europa',
-			preco_venda: 15000000,
-			preco_locacao: 60000,
-			fotos: [
-				'http://www.angloamericana.com.br/img/arquivoanexo/340672_0.jpg',
-				'http://www.angloamericana.com.br/img/arquivoanexo/340672_1.jpg',
-				'http://www.angloamericana.com.br/img/arquivoanexo/340672_2.jpg',
-				'http://www.angloamericana.com.br/img/arquivoanexo/340672_3.jpg',
-				'http://www.angloamericana.com.br/img/arquivoanexo/340672_4.jpg',
-			],
-			suites: 4,
-			dormitorios: 4,
-			vagas: 4,
-			area: 528,
-			descricao: 'Linda casa no JARDIM EUROPA 528.00 m² de área construída, 4 dormitórios ( sendo 4 suítes ), 922.00 metros de terreno, banheiro sr. e sra., closet, ar condicionado, piscina, 4 vagas de garagem.',
-			detalhes: ['Ar Condicionado', 'Banheiro Sr. e Sra.', 'Closet', 'Piscina']
-		},
-		{
-			referencia: '347875',
-			finalidade: 'Locação',
-			tipo: 'Apartamento',
-			condominio: 3600,
-			bairro: 'Moema',
-			preco_venda: 0,
-			preco_locacao: 15000,
-			fotos: [
-				'http://www.angloamericana.com.br/img/arquivoanexo/347875_0.jpg',
-				'http://www.angloamericana.com.br/img/arquivoanexo/347875_1.jpg',
-				'http://www.angloamericana.com.br/img/arquivoanexo/347875_2.jpg',
-				'http://www.angloamericana.com.br/img/arquivoanexo/347875_3.jpg'
-			],
-			suites: 2,
-			dormitorios: 2,
-			vagas: 4,
-			area: 200,
-			descricao: 'Apartamento MOEMA com: 200.00 m² de área útil, 2 dormitórios ( sendo 2 suítes ), banheiro sr. e sra., varanda, mobília, hidro-massagem, escritório, suíte master, churrasqueira privativa. Condomínio com: aquecimento, forno, ar condicionado, piscina, quadra poli-esportiva, sauna, salão de festas, sala ginastica, churrasqueira, espaço gourmet, 4 vagas de garagem.',
-			detalhes: ['Mobília']
-		}
-	]
+	$scope.destaqueLocacao = {
+		referencia: '347875',
+		finalidade: 'Locação',
+		tipo: 'Apartamento',
+		condominio: 3600,
+		bairro: 'Moema',
+		preco_venda: 0,
+		preco_locacao: 15000,
+		fotos: [
+			'http://www.angloamericana.com.br/img/arquivoanexo/347875_0.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/347875_1.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/347875_2.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/347875_3.jpg'
+		],
+		suites: 2,
+		dormitorios: 2,
+		vagas: 4,
+		area: 200,
+		descricao: 'Apartamento MOEMA com: 200.00 m² de área útil, 2 dormitórios ( sendo 2 suítes ), banheiro sr. e sra., varanda, mobília, hidro-massagem, escritório, suíte master, churrasqueira privativa. Condomínio com: aquecimento, forno, ar condicionado, piscina, quadra poli-esportiva, sauna, salão de festas, sala ginastica, churrasqueira, espaço gourmet, 4 vagas de garagem.',
+		detalhes: ['Mobília']
+	}
+	$scope.destaqueVenda = {
+		referencia: '350680',
+		finalidade: 'Venda',
+		tipo: 'Cobertura',
+		condominio: 3800,
+		bairro: 'Paraíso',
+		preco_venda: 3800000,
+		preco_locacao: 22000,
+		fotos: [
+			'http://www.angloamericana.com.br/img/arquivoanexo/350680_0.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/350680_1.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/350680_2.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/350680_3.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/350680_4.jpg'
+		],
+		suites: 3,
+		dormitorios: 4,
+		vagas: 4,
+		area: 285,
+		descricao: 'Cobertura decorada com muito bom gosto , pode ser locada também sem os móveis, no Paraíso, piscina e academia privativas , pronta para morar com muito conforto e lazer , ar condicionado em 285.00 m com 4 dts sendo 3 suítes, 4 vagas.',
+		detalhes: []
+	}
 
 // DATA - Resultados da Busca
 	$scope.imoveisBusca = [
@@ -147,6 +102,7 @@ angular.module('anglo', [])
 			finalidade: 'Venda',
 			tipo: 'Cobertura',
 			condominio: 3800,
+			iptu: 2000,
 			bairro: 'Paraíso',
 			preco_venda: 3800000,
 			preco_locacao: 22000,
@@ -165,10 +121,33 @@ angular.module('anglo', [])
 			detalhes: []
 		},
 		{
+			referencia: '347875',
+			finalidade: 'Locação',
+			tipo: 'Apartamento',
+			condominio: 3600,
+			iptu: 2000,
+			bairro: 'Moema',
+			preco_venda: 0,
+			preco_locacao: 15000,
+			fotos: [
+				'http://www.angloamericana.com.br/img/arquivoanexo/347875_0.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/347875_1.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/347875_2.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/347875_3.jpg'
+			],
+			suites: 2,
+			dormitorios: 2,
+			vagas: 4,
+			area: 200,
+			descricao: 'Apartamento MOEMA com: 200.00 m² de área útil, 2 dormitórios ( sendo 2 suítes ), banheiro sr. e sra., varanda, mobília, hidro-massagem, escritório, suíte master, churrasqueira privativa. Condomínio com: aquecimento, forno, ar condicionado, piscina, quadra poli-esportiva, sauna, salão de festas, sala ginastica, churrasqueira, espaço gourmet, 4 vagas de garagem.',
+			detalhes: ['Mobília']
+		},
+		{
 			referencia: '181170',
 			finalidade: 'Venda',
 			tipo: 'Apartamento',
 			condominio: 1270,
+			iptu: 2000,
 			bairro: 'Vila Nova Conceição',
 			preco_venda: 920000,
 			preco_locacao: 5600,
@@ -190,6 +169,7 @@ angular.module('anglo', [])
 			finalidade: 'Venda',
 			tipo: 'Casa',
 			condominio: 0,
+			iptu: 2000,
 			bairro: 'Jardim Europa',
 			preco_venda: 15000000,
 			preco_locacao: 60000,
@@ -208,31 +188,11 @@ angular.module('anglo', [])
 			detalhes: ['Ar Condicionado', 'Banheiro Sr. e Sra.', 'Closet', 'Piscina']
 		},
 		{
-			referencia: '347875',
-			finalidade: 'Locação',
-			tipo: 'Apartamento',
-			condominio: 3600,
-			bairro: 'Moema',
-			preco_venda: 0,
-			preco_locacao: 15000,
-			fotos: [
-				'http://www.angloamericana.com.br/img/arquivoanexo/347875_0.jpg',
-				'http://www.angloamericana.com.br/img/arquivoanexo/347875_1.jpg',
-				'http://www.angloamericana.com.br/img/arquivoanexo/347875_2.jpg',
-				'http://www.angloamericana.com.br/img/arquivoanexo/347875_3.jpg'
-			],
-			suites: 2,
-			dormitorios: 2,
-			vagas: 4,
-			area: 200,
-			descricao: 'Apartamento MOEMA com: 200.00 m² de área útil, 2 dormitórios ( sendo 2 suítes ), banheiro sr. e sra., varanda, mobília, hidro-massagem, escritório, suíte master, churrasqueira privativa. Condomínio com: aquecimento, forno, ar condicionado, piscina, quadra poli-esportiva, sauna, salão de festas, sala ginastica, churrasqueira, espaço gourmet, 4 vagas de garagem.',
-			detalhes: ['Mobília']
-		},
-		{
 			referencia: '349841',
 			finalidade: 'Venda',
 			tipo: 'Casa',
 			condominio: 3600,
+			iptu: 2000,
 			bairro: 'Alto de Pinheiros',
 			preco_venda: 5900000,
 			preco_locacao: 25000,
@@ -254,6 +214,7 @@ angular.module('anglo', [])
 			finalidade: 'Venda',
 			tipo: 'Casa Cond. Fechado',
 			condominio: 3600,
+			iptu: 2000,
 			bairro: 'Morumbi',
 			preco_venda: 12000000,
 			preco_locacao: 38000,
@@ -275,6 +236,7 @@ angular.module('anglo', [])
 			finalidade: 'Venda',
 			tipo: 'Casa Cond. Fechado',
 			condominio: 5300,
+			iptu: 2000,
 			bairro: 'Alto da Boa Vista',
 			preco_venda: 2400000,
 			preco_locacao: 0,
@@ -296,6 +258,7 @@ angular.module('anglo', [])
 			finalidade: 'Venda',
 			tipo: 'Cobertura',
 			condominio: 2912,
+			iptu: 2000,
 			bairro: 'Moema',
 			preco_venda: 2180000,
 			preco_locacao: 0,
@@ -317,6 +280,7 @@ angular.module('anglo', [])
 			finalidade: 'Venda',
 			tipo: 'Apartamento',
 			condominio: 950,
+			iptu: 2000,
 			bairro: 'Jardins',
 			preco_venda: 1400000,
 			preco_locacao: 0,
@@ -338,6 +302,7 @@ angular.module('anglo', [])
 			finalidade: 'Venda',
 			tipo: 'Apartamento',
 			condominio: 3010,
+			iptu: 2000,
 			bairro: 'Jardim Paulista',
 			preco_venda: 4500000,
 			preco_locacao: 0,

@@ -33,7 +33,8 @@
 					<h3 class="blue">MEUS FAVORITOS</h3>
 					<a class="red" href="" ng-click="lastLink()"><h5><i class="fa fa-arrow-left" aria-hidden="true"></i> Voltar</h5></a>
 					<div class="row">
-						<div ng-repeat-start="imovel in imoveisDestaque track by $index" class="slider-container col-sm-12 col-md-6">  
+						<div ng-repeat-start="imovel in imoveisBusca track by $index" class="slider-container col-sm-12 col-md-6"> 
+							<h3 class="finalidade venda">{{imovel.finalidade}}</h3>
 							<div class="fav" ng-click="removeFav($event)" data-toggle="tooltip" data-placement="bottom" title="Remover dos favoritos"><i class="fa fa-star" aria-hidden="true"></i></div>
 							
 							<div class="slider">
@@ -56,6 +57,25 @@
 							</a>
 						</div>
 						<div ng-repeat-end ng-if="($index + 1) % 2 == 0" class=""></div>
+
+						<div class="col-sm-12 text-center">
+							<nav aria-label="Page navigation">
+							  <ul class="pagination">
+							    <li>
+							      <a href="#" aria-label="Previous">
+							        <span aria-hidden="true">&laquo;</span>
+							      </a>
+							    </li>
+							    <li class="active"><a href="#">1</a></li>
+							    <li><a href="#">2</a></li>
+							    <li>
+							      <a href="#" aria-label="Next">
+							        <span aria-hidden="true">&raquo;</span>
+							      </a>
+							    </li>
+							  </ul>
+							</nav>
+						</div> <!-- col end -->
 					</div>
 				</div>
 			</div>

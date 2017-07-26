@@ -65,6 +65,8 @@
 					  <dd ng-if="imovel.preco_locacao != 0"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif">{{imovel.preco_locacao | currency:"R$ "}}</span></dd>
 					  <dt ng-if="imovel.condominio != 0">Condomínio</dt>
 					  <dd ng-if="imovel.condominio != 0"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif">{{imovel.condominio | currency:"R$ "}}</span></dd>
+					  <dt ng-if="imovel.iptu != 0">IPTU</dt>
+					  <dd ng-if="imovel.iptu != 0"><span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif">{{imovel.iptu | currency:"R$ "}}</span></dd>					  
 					  <dt>Quartos</dt>
 					  <dd>{{imovel.dormitorios}}</dd>
 					  <dt ng-if="imovel.suites != 0">Suítes</dt>

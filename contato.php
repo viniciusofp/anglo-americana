@@ -12,7 +12,6 @@
 			CRECI 6975J</p>
 			<ul class="list-inline">
 				<li><a href="https://www.facebook.com/AngloAmericana" target="_blank"><h4><i class="fa fa-facebook-square blue" aria-hidden="true"></i> Facebook</h4></a></li>
-				<li><a href="https://www.linkedin.com/company/9412965" target="_blank"><h4><i class="fa fa-linkedin-square blue" aria-hidden="true"></i> Linkedin</h4></a></li>
 			</ul>
 		</div>
 		<div class="col-sm-6 col-md-6">
@@ -22,11 +21,11 @@
 			    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nome">
 			  </div>
 			  <div class="form-group">
-			    <h5 for="exampleInputEmail1" class="blue">EMAIL</h5>
+			    <h5 for="exampleInputEmail1" class="blue">EMAIL <span class="red">*</span></h5>
 			    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
 			  </div>
 			  <div class="form-group">
-			    <h5 for="exampleInputEmail1" class="blue">TELEFONE</h5>
+			    <h5 for="exampleInputEmail1" class="blue">TELEFONE <span class="red">*</span></h5>
 			    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Telefone">
 			  </div>
 			  <div class="form-group">
@@ -34,6 +33,7 @@
 			    <textarea type="text" class="form-control" id="exampleInputPassword1" placeholder="Escreva aqui sua mensagem"></textarea>
 			  </div>
 			  <button type="submit" class="btn btn-warning">ENVIAR MENSAGEM</button>
+		  	  <p class="red"><small>* Campos obrigatórios</small></p>
 			</form>
 		</div>
 	</div>

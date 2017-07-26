@@ -54,8 +54,8 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Imóveis <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="resultados-de-busca.php">Encontre seu imóvel</a></li>
-                <li class="hidden"><a href="#">Lançamentos</a></li>
-                <li class="hidden"><a href="#">Internacional</a></li>
+                <li><a href="#">Lançamentos</a></li>
+                <li><a href="#">Internacional</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#" ng-click="cadastreToggle()">Cadastre seu imóvel</a></li>
               </ul>

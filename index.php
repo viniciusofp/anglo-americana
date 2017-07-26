@@ -44,18 +44,18 @@
 		</div>
 		<div class="clearfix visible-xs visible-sm"></div>
 		<div class="col-sm-12 col-md-6">
-			<h5 class="blue">PREÇO MÁXIMO</h5>
-			<div class="row">
-				<div class="preco-input input-group col-xs-12">
-				  <input ng-model="precoMin" ng-change="changePrecoMin()" type="number" step="500" class="form-control" aria-describedby="preco-min" min="0">
-				  <span class="input-group-addon" id="preco-min">min.</span>
-				</div>
-			</div>
 			<h5 class="blue">PREÇO MÍNIMO</h5>
 			<div class="row">
 				<div class="preco-input input-group col-xs-12">
 				  <input ng-model="precoMax" ng-change="changePrecoMax()" type="number" step="500" class="form-control" aria-describedby="preco-max" min="0">
 				  <span class="input-group-addon" id="preco-max">máx.</span>
+				</div>
+			</div>
+			<h5 class="blue">PREÇO MÁXIMO</h5>
+			<div class="row">
+				<div class="preco-input input-group col-xs-12">
+				  <input ng-model="precoMin" ng-change="changePrecoMin()" type="number" step="500" class="form-control" aria-describedby="preco-min" min="0">
+				  <span class="input-group-addon" id="preco-min">min.</span>
 				</div>
 			</div>
 			<h5 class="blue">ÁREA MÍNIMA</h5>
@@ -114,22 +114,46 @@
 			<a name="destaque"></a>
 			<h3 class="blue section-title">IMÓVEIS EM DESTAQUE</h3>
 		</div>
-		<div ng-repeat="imovel in imoveisDestaque track by $index" class="slider-container col-sm-6">  
+<!-- 		DESTAQUE VENDA -->
+		<div class="slider-container col-sm-6">  
+			<h3 class="finalidade">Venda</h3> 
 			<div class="slider">
-			    <div ng-repeat="foto in imovel.fotos" style="background-image: url({{foto}});">
-			    	<a href="detalhes.php#{{$parent.$index}}"><div class="foto-trigger"></div></a>
+			    <div ng-repeat="foto in destaqueVenda.fotos" style="background-image: url({{foto}});">
+			    	<a href="detalhes.php#0"><div class="foto-trigger"></div></a>
 			    </div>
 			</div>
-			<a  href="detalhes.php#{{$index}}">
+			<a  href="detalhes.php#0">
 				<ul class="list-inline">
-					<li><h3>{{imovel.tipo}} - {{imovel.bairro}}</h3></li>
+					<li><h3>{{destaqueVenda.tipo}} - {{destaqueVenda.bairro}}</h3></li>
 					<div class="clearfix"></div>
-					<li><h5><i class="fa fa-bed red" aria-hidden="true"></i> Quartos: {{imovel.dormitorios}}</h5></li>
-					<li><h5><i class="fa fa-car red" aria-hidden="true"></i> Vagas: {{imovel.vagas}}</h5></li>
-					<li><h5><i class="fa fa-map-o red" aria-hidden="true"></i> Área: {{imovel.area}} m<sup>2</sup></h5></li>	
+					<li><h5><i class="fa fa-bed red" aria-hidden="true"></i> Quartos: {{destaqueVenda.dormitorios}}</h5></li>
+					<li><h5><i class="fa fa-car red" aria-hidden="true"></i> Vagas: {{destaqueVenda.vagas}}</h5></li>
+					<li><h5><i class="fa fa-map-o red" aria-hidden="true"></i> Área: {{destaqueVenda.area}} m<sup>2</sup></h5></li>	
 					<div class="clearfix"></div>	
-					<li ng-if="imovel.finalidade == 'Venda'"><h5><strong>{{imovel.finalidade}}: </strong><span style="font-family: Helvetica, Arial, sans-serif">{{imovel.preco_venda | currency:"R$ "}}</span></h5></li>
-					<li ng-if="imovel.finalidade != 'Venda'"><h5><strong>{{imovel.finalidade}}: </strong><span style="font-family: Helvetica, Arial, sans-serif">{{imovel.preco_locacao | currency:"R$ "}}</span></h5></li>				
+					<li ng-if="destaqueVenda.finalidade == 'Venda'"><h5><strong>{{destaqueVenda.finalidade}}: </strong><span style="font-family: Helvetica, Arial, sans-serif">{{destaqueVenda.preco_venda | currency:"R$ "}}</span></h5></li>
+					<li ng-if="destaqueVenda.finalidade != 'Venda'"><h5><strong>{{destaqueVenda.finalidade}}: </strong><span style="font-family: Helvetica, Arial, sans-serif">{{destaqueVenda.preco_locacao | currency:"R$ "}}</span></h5></li>				
+					<li><button class="btn btn-warning">Veja os detalhes</button></li>
+				</ul>
+			</a>
+		</div>
+<!-- 		DESTAQUE LOCAÇÃO -->
+		<div class="slider-container col-sm-6">  
+			<h3 class="finalidade">Locação</h3>
+			<div class="slider">
+			    <div ng-repeat="foto in destaqueLocacao.fotos" style="background-image: url({{foto}});">
+			    	<a href="detalhes.php#1"><div class="foto-trigger"></div></a>
+			    </div>
+			</div>
+			<a  href="detalhes.php#1">
+				<ul class="list-inline">
+					<li><h3>{{destaqueLocacao.tipo}} - {{destaqueLocacao.bairro}}</h3></li>
+					<div class="clearfix"></div>
+					<li><h5><i class="fa fa-bed red" aria-hidden="true"></i> Quartos: {{destaqueLocacao.dormitorios}}</h5></li>
+					<li><h5><i class="fa fa-car red" aria-hidden="true"></i> Vagas: {{destaqueLocacao.vagas}}</h5></li>
+					<li><h5><i class="fa fa-map-o red" aria-hidden="true"></i> Área: {{destaqueLocacao.area}} m<sup>2</sup></h5></li>	
+					<div class="clearfix"></div>	
+					<li ng-if="destaqueLocacao.finalidade == 'Venda'"><h5><strong>{{destaqueLocacao.finalidade}}: </strong><span style="font-family: Helvetica, Arial, sans-serif">{{destaqueLocacao.preco_venda | currency:"R$ "}}</span></h5></li>
+					<li ng-if="destaqueLocacao.finalidade != 'Venda'"><h5><strong>{{destaqueLocacao.finalidade}}: </strong><span style="font-family: Helvetica, Arial, sans-serif">{{destaqueLocacao.preco_locacao | currency:"R$ "}}</span></h5></li>				
 					<li><button class="btn btn-warning">Veja os detalhes</button></li>
 				</ul>
 			</a>

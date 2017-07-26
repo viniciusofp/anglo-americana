@@ -35,18 +35,18 @@
 				</div>
 				<div class="clearfix visible-xs visible-sm"></div>
 				<div class="col-sm-12">
-					<h5 class="blue">PREÇO MÁXIMO</h5>
-					<div class="row">
-						<div class="preco-input input-group col-xs-12">
-						  <input ng-model="precoMin" ng-change="changePrecoMin()" type="number" step="500" class="form-control" aria-describedby="preco-min" min="0">
-						  <span class="input-group-addon" id="preco-min">min.</span>
-						</div>
-					</div>
 					<h5 class="blue">PREÇO MÍNIMO</h5>
 					<div class="row">
 						<div class="preco-input input-group col-xs-12">
 						  <input ng-model="precoMax" ng-change="changePrecoMax()" type="number" step="500" class="form-control" aria-describedby="preco-max" min="0">
 						  <span class="input-group-addon" id="preco-max">máx.</span>
+						</div>
+					</div>
+					<h5 class="blue">PREÇO MÁXIMO</h5>
+					<div class="row">
+						<div class="preco-input input-group col-xs-12">
+						  <input ng-model="precoMin" ng-change="changePrecoMin()" type="number" step="500" class="form-control" aria-describedby="preco-min" min="0">
+						  <span class="input-group-addon" id="preco-min">min.</span>
 						</div>
 					</div>
 					<h5 class="blue">ÁREA MÍNIMA</h5>
@@ -116,7 +116,7 @@
 			<div class="row">
 				<div ng-repeat-start="imovel in imoveisBusca track by $index" class="slider-container col-sm-12 col-md-6">  
 					<div class="fav" ng-click="addFav($event)" data-toggle="tooltip" data-placement="bottom" title="Adicionar / Remover dos favoritos"><i class="fa fa-star-o" aria-hidden="true"></i></div>
-					
+					<h3 class="finalidade">{{imovel.finalidade}}</h3> 
 					<div class="slider">
 					    <div ng-repeat="foto in imovel.fotos" style="background-image: url({{foto}});">
 					    	<a href="detalhes.php#{{$parent.$index}}"><div class="foto-trigger"></div></a>
@@ -130,8 +130,8 @@
 							<li><h5><i class="fa fa-car red" aria-hidden="true"></i> Vagas: {{imovel.vagas}}</h5></li>
 							<li><h5><i class="fa fa-map-o red" aria-hidden="true"></i> Área: {{imovel.area}} m<sup>2</sup></h5></li>	
 							<div class="clearfix"></div>	
-							<li ng-if="imovel.finalidade == 'Venda'"><h5><strong>{{imovel.finalidade}}: </strong><span style="font-family: Helvetica, Arial, sans-serif">{{imovel.preco_venda | currency:"R$ "}}</span></h5></li>
-							<li ng-if="imovel.finalidade != 'Venda'"><h5><strong>{{imovel.finalidade}}: </strong><span style="font-family: Helvetica, Arial, sans-serif">{{imovel.preco_locacao | currency:"R$ "}}</span></h5></li>				
+							<li ng-if="imovel.preco_venda > 0"><h5><strong>{{imovel.finalidade}}: </strong><span style="font-family: Helvetica, Arial, sans-serif">{{imovel.preco_venda | currency:"R$ "}}</span></h5></li>
+							<li ng-if="imovel.preco_locacao > 0"><h5><strong>{{imovel.finalidade}}: </strong><span style="font-family: Helvetica, Arial, sans-serif">{{imovel.preco_locacao | currency:"R$ "}}</span></h5></li>				
 							<li><button class="btn btn-warning">Veja os detalhes</button></li>
 						</ul>
 					</a>
