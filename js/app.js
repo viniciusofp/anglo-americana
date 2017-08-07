@@ -321,8 +321,311 @@ angular.module('anglo', [])
 		}
 	]
 
-// DATA - Single Imovel
+// DATA - Lançamentos
+	$scope.imoveisLancamentos = [
+		{
+			referencia: '350680',
+			finalidade: 'Venda',
+			estadodaobra: 'Em construção',
+			tipo: 'Cobertura',
+			empreendimento: 'Authentic',
+			condominio: 3800,
+			iptu: 2000,
+			cidade: 'São Paulo',
+			bairro: 'Paraíso',
+			preco_venda: 3800000,
+			preco_locacao: 22000,
+			fotos: [
+				'http://www.angloamericana.com.br/img/arquivoanexo/350680_0.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/350680_1.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/350680_2.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/350680_3.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/350680_4.jpg'
+			],
+			blocos: [
+				{
+					nome: 'Bloco Um',
+					suites: 3,
+					dormitorios: 4,
+					vagas: 4,
+					area: 285,
+					planta: 'http://bossanova.sigavi360.com.br/Arquivo/Empreendimento/6/Planta/Art_Cube_planta145m%C2%B2_4dorms.jpg'
+				},
+				{
+					nome: 'Bloco Dois',
+					suites: 2,
+					dormitorios: 3,
+					vagas: 2,
+					area: 230,
+					planta: 'http://bossanova.sigavi360.com.br/Arquivo/Empreendimento/6/Planta/Art_Cube_planta263m%C2%B2_cobertura_inf_4dorms.jpg'
+				},
+				{
+					nome: 'Bloco Três',
+					suites: 4,
+					dormitorios: 5,
+					vagas: 4,
+					area: 330,
+					planta: 'http://bossanova.sigavi360.com.br/Arquivo/Empreendimento/6/Planta/Art_Cube_planta145m%C2%B2_4dorms.jpg'
+				}
+			],
+			descricao: 'Cobertura decorada com muito bom gosto , pode ser locada também sem os móveis, no Paraíso, piscina e academia privativas , pronta para morar com muito conforto e lazer , ar condicionado em 285.00 m com 4 dts sendo 3 suítes, 4 vagas.',
+			resumo: 'Cobertura decorada com muito bom gosto , pode ser locada também sem os móveis, no Paraíso..',
+			detalhes: ['Espaço Gourmet', 'Salão de Festas', 'Solarium', 'Piscina', 'Sala Fitness']
+		},
+		{
+			referencia: '347875',
+			finalidade: 'Locação',
+			estadodaobra: 'Na Planta',
+			tipo: 'Apartamento',
+			empreendimento: 'Nomad',
+			condominio: 3600,
+			iptu: 2000,
+			cidade: 'São Paulo',
+			bairro: 'Moema',
+			preco_venda: 0,
+			preco_locacao: 15000,
+			fotos: [
+				'http://www.angloamericana.com.br/img/arquivoanexo/347875_0.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/347875_1.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/347875_2.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/347875_3.jpg'
+			],
+			blocos: [
+				{
+					nome: 'Bloco Um',
+					suites: 3,
+					dormitorios: 4,
+					vagas: 4,
+					area: 285,
+					planta: 'http://bossanova.sigavi360.com.br/Arquivo/Empreendimento/114/Planta/Planta%20Tipo%201%C2%BA%20pav%20-%20146%20m%C2%B2.jpg'
+				},
+				{
+					nome: 'Bloco Dois',
+					suites: 2,
+					dormitorios: 3,
+					vagas: 2,
+					area: 230,
+					planta: 'http://bossanova.sigavi360.com.br/Arquivo/Empreendimento/114/Planta/Planta%20T%202%20Cobertura%20Inferior%20-%20157%20m%C2%B2.jpg'
+				},
+				{
+					nome: 'Bloco Três',
+					suites: 4,
+					dormitorios: 5,
+					vagas: 4,
+					area: 330,
+					planta: 'http://bossanova.sigavi360.com.br/Arquivo/Empreendimento/114/Planta/Planta%20Cobertura%20Superior%20-%20276%20m%C2%B2.jpg'
+				}
+			],
+			descricao: 'Apartamento MOEMA com: 200.00 m² de área útil, 2 dormitórios ( sendo 2 suítes ), banheiro sr. e sra., varanda, mobília, hidro-massagem, escritório, suíte master, churrasqueira privativa. Condomínio com: aquecimento, forno, ar condicionado, piscina, quadra poli-esportiva, sauna, salão de festas, sala ginastica, churrasqueira, espaço gourmet, 4 vagas de garagem.',
+			resumo: 'Apartamento MOEMA com: 200.00 m² de área útil, 2 dormitórios ( sendo 2 suítes ).',
+			detalhes: ['Mobília']
+		},
+		{
+			referencia: '181170',
+			finalidade: 'Venda',
+			estadodaobra: 'Pronto',
+			tipo: 'Apartamento',
+			empreendimento: 'Medley',
+			condominio: 1270,
+			iptu: 2000,
+			cidade: 'São Paulo',
+			bairro: 'Vila Nova Conceição',
+			preco_venda: 920000,
+			preco_locacao: 5600,
+			fotos: [
+				'http://www.angloamericana.com.br/img/arquivoanexo/181170_0.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/181170_1.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/181170_2.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/181170_3.jpg',
+			],
+			blocos: [
+				{
+					nome: 'Bloco Um',
+					suites: 3,
+					dormitorios: 4,
+					vagas: 4,
+					area: 285,
+					planta: 'http://bossanova.sigavi360.com.br/Arquivo/Empreendimento/114/Planta/Planta%20Tipo%201%C2%BA%20pav%20-%20146%20m%C2%B2.jpg'
+				},
+				{
+					nome: 'Bloco Dois',
+					suites: 2,
+					dormitorios: 3,
+					vagas: 2,
+					area: 230,
+					planta: 'http://bossanova.sigavi360.com.br/Arquivo/Empreendimento/114/Planta/Planta%20T%202%20Cobertura%20Inferior%20-%20157%20m%C2%B2.jpg'
+				},
+				{
+					nome: 'Bloco Três',
+					suites: 4,
+					dormitorios: 5,
+					vagas: 4,
+					area: 330,
+					planta: 'http://bossanova.sigavi360.com.br/Arquivo/Empreendimento/114/Planta/Planta%20Cobertura%20Superior%20-%20276%20m%C2%B2.jpg'
+				}
+			],
+			descricao: 'Apartamento VILA NOVA CONCEIÇÃO com: 48.00 m² de área útil, 1 dormitório ( sendo 1 suíte ), mobília, 1 vaga de garagem.',
+			resumo: 'Apartamento VILA NOVA CONCEIÇÃO com: 48.00 m² de área útil, 1 dormitório ( sendo 1 suíte ).',
+			detalhes: ['Mobília']
+		},
+		{
+			referencia: '340672',
+			finalidade: 'Venda',
+			estadodaobra: 'Em construção',
+			tipo: 'Casa',
+			empreendimento: 'Studio',
+			condominio: 0,
+			iptu: 2000,
+			cidade: 'São Paulo',
+			bairro: 'Jardim Europa',
+			preco_venda: 15000000,
+			preco_locacao: 60000,
+			fotos: [
+				'http://www.angloamericana.com.br/img/arquivoanexo/340672_0.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/340672_1.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/340672_2.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/340672_3.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/340672_4.jpg',
+			],
+			blocos: [
+				{
+					nome: 'Bloco Um',
+					suites: 3,
+					dormitorios: 4,
+					vagas: 4,
+					area: 285,
+					planta: 'http://bossanova.sigavi360.com.br/Arquivo/Empreendimento/114/Planta/Planta%20Tipo%201%C2%BA%20pav%20-%20146%20m%C2%B2.jpg'
+				},
+				{
+					nome: 'Bloco Dois',
+					suites: 2,
+					dormitorios: 3,
+					vagas: 2,
+					area: 230,
+					planta: 'http://bossanova.sigavi360.com.br/Arquivo/Empreendimento/114/Planta/Planta%20T%202%20Cobertura%20Inferior%20-%20157%20m%C2%B2.jpg'
+				},
+				{
+					nome: 'Bloco Três',
+					suites: 4,
+					dormitorios: 5,
+					vagas: 4,
+					area: 330,
+					planta: 'http://bossanova.sigavi360.com.br/Arquivo/Empreendimento/114/Planta/Planta%20Cobertura%20Superior%20-%20276%20m%C2%B2.jpg'
+				}
+			],
+			descricao: 'Linda casa no JARDIM EUROPA 528.00 m² de área construída, 4 dormitórios ( sendo 4 suítes ), 922.00 metros de terreno, banheiro sr. e sra., closet, ar condicionado, piscina, 4 vagas de garagem.',
+			resumo: 'Linda casa no JARDIM EUROPA 528.00 m² de área construída, 4 dormitórios ( sendo 4 suítes ).',
+			detalhes: ['Ar Condicionado', 'Banheiro Sr. e Sra.', 'Closet', 'Piscina']
+		}
+	]
+
+// DATA - Internacional
+	$scope.imoveisInternacional = [
+		{
+			referencia: '350680',
+			finalidade: 'Venda',
+			tipo: 'Cobertura',
+			condominio: 3800,
+			iptu: 2000,
+			bairro: 'Midtown',
+			cidade: 'Miami (EUA)',
+			preco_venda: 3800000,
+			preco_locacao: 22000,
+			fotos: [
+				'http://www.angloamericana.com.br/img/arquivoanexo/350680_0.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/350680_1.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/350680_2.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/350680_3.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/350680_4.jpg'
+			],
+			suites: 3,
+			dormitorios: 4,
+			vagas: 4,
+			area: 285,
+			descricao: 'Cobertura decorada com muito bom gosto , pode ser locada também sem os móveis, no Paraíso, piscina e academia privativas , pronta para morar com muito conforto e lazer , ar condicionado em 285.00 m com 4 dts sendo 3 suítes, 4 vagas.',
+			detalhes: []
+		},
+		{
+			referencia: '347875',
+			finalidade: 'Locação',
+			tipo: 'Apartamento',
+			condominio: 3600,
+			iptu: 2000,
+			bairro: 'Miami Beach',
+			cidade: 'Miami (EUA)',
+			preco_venda: 0,
+			preco_locacao: 15000,
+			fotos: [
+				'http://www.angloamericana.com.br/img/arquivoanexo/347875_0.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/347875_1.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/347875_2.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/347875_3.jpg'
+			],
+			suites: 2,
+			dormitorios: 2,
+			vagas: 4,
+			area: 200,
+			descricao: 'Apartamento MOEMA com: 200.00 m² de área útil, 2 dormitórios ( sendo 2 suítes ), banheiro sr. e sra., varanda, mobília, hidro-massagem, escritório, suíte master, churrasqueira privativa. Condomínio com: aquecimento, forno, ar condicionado, piscina, quadra poli-esportiva, sauna, salão de festas, sala ginastica, churrasqueira, espaço gourmet, 4 vagas de garagem.',
+			detalhes: ['Mobília']
+		},
+		{
+			referencia: '181170',
+			finalidade: 'Venda',
+			tipo: 'Apartamento',
+			condominio: 1270,
+			iptu: 2000,
+			bairro: 'Little Havana',
+			cidade: 'Miami (EUA)',
+			preco_venda: 920000,
+			preco_locacao: 5600,
+			fotos: [
+				'http://www.angloamericana.com.br/img/arquivoanexo/181170_0.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/181170_1.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/181170_2.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/181170_3.jpg',
+			],
+			suites: 1,
+			dormitorios: 1,
+			vagas: 1,
+			area: 48,
+			descricao: 'Apartamento VILA NOVA CONCEIÇÃO com: 48.00 m² de área útil, 1 dormitório ( sendo 1 suíte ), mobília, 1 vaga de garagem.',
+			detalhes: ['Mobília']
+		},
+		{
+			referencia: '340672',
+			finalidade: 'Venda',
+			tipo: 'Casa',
+			condominio: 0,
+			iptu: 2000,
+			bairro: 'Key Biscayne',
+			cidade: 'Miami (EUA)',
+			preco_venda: 15000000,
+			preco_locacao: 60000,
+			fotos: [
+				'http://www.angloamericana.com.br/img/arquivoanexo/340672_0.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/340672_1.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/340672_2.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/340672_3.jpg',
+				'http://www.angloamericana.com.br/img/arquivoanexo/340672_4.jpg',
+			],
+			suites: 4,
+			dormitorios: 4,
+			vagas: 4,
+			area: 528,
+			descricao: 'Linda casa no JARDIM EUROPA 528.00 m² de área construída, 4 dormitórios ( sendo 4 suítes ), 922.00 metros de terreno, banheiro sr. e sra., closet, ar condicionado, piscina, 4 vagas de garagem.',
+			detalhes: ['Ar Condicionado', 'Banheiro Sr. e Sra.', 'Closet', 'Piscina']
+		}
+	]
+
+// DATA - Single Lançamento
 	$scope.imovel = $scope.imoveisBusca[window.location.hash.substr(1)];
+
+// DATA - Single Lançamento
+	$scope.lancamento = $scope.imoveisLancamentos[window.location.hash.substr(1)];
+
+// DATA - Single Internacional
+	$scope.internacional = $scope.imoveisInternacional[window.location.hash.substr(1)];
+
 
 // DATA - Bairros
 	$scope.bairros = [
@@ -345,7 +648,6 @@ angular.module('anglo', [])
 		'Pinheiros',
 		'Alto de Pinheiros',
 		'Alto da Boa Vista',
-		'Chácara Flora',
 		'Chácara Santo Antônio',
 		'Morumbi',
 		'Panamby',
@@ -356,7 +658,16 @@ angular.module('anglo', [])
 // UI - Home - Abrir div Encontre seu Imóvel
 	$scope.toggleEncontreBtn = function() {
 		$('#home-banner-buttons, #busca-imovel').toggleClass('on');
+
+
 	}
+	$(document).click(function(event) { 
+	    if(!$(event.target).closest('#home-banner-buttons, #busca-imovel').length) {
+	        if($('#home-banner-buttons, #busca-imovel').is(":visible")) {
+	            $('#home-banner-buttons, #busca-imovel').removeClass('on');
+	        }
+	    }        
+	})
 
 // UI - Home - Busca de Imóveis - Manter preço máximo maior que preço mínimo
 	$scope.changePrecoMin = function() {

@@ -48,14 +48,14 @@
 			<div class="row">
 				<div class="preco-input input-group col-xs-12">
 				  <input ng-model="precoMax" ng-change="changePrecoMax()" type="number" step="500" class="form-control" aria-describedby="preco-max" min="0">
-				  <span class="input-group-addon" id="preco-max">máx.</span>
+				  <span class="input-group-addon" id="preco-max">mín.</span>
 				</div>
 			</div>
 			<h5 class="blue">PREÇO MÁXIMO</h5>
 			<div class="row">
 				<div class="preco-input input-group col-xs-12">
 				  <input ng-model="precoMin" ng-change="changePrecoMin()" type="number" step="500" class="form-control" aria-describedby="preco-min" min="0">
-				  <span class="input-group-addon" id="preco-min">min.</span>
+				  <span class="input-group-addon" id="preco-min">máx.</span>
 				</div>
 			</div>
 			<h5 class="blue">ÁREA MÍNIMA</h5>
@@ -168,7 +168,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-10 col-sm-offset-1 text-center">
-				<h1>Desde 1941 fazendo história <br class="hidden-xs">no mercado imobilliário.</h1>
+				<h1>Desde 1941 fazendo história <br class="hidden-xs">no mercado imobiliário.</h1>
 				<p class="lead">A Anglo Americana atua no mercado imobiliário de São Paulo <br class="visible-lg">fornecendo aos clientes um atendimento exclusivo e personalizado. </p>
 				<a href="empresa.php"><button class="btn btn-default">SAIBA MAIS</button></a>
 			</div>

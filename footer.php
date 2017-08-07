@@ -40,9 +40,16 @@
 
 //Iniciar Lightbox
 
-		$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+		$(document).on('click', '[data-gallery="imovel-gallery"]', function(event) {
 		    event.preventDefault();
 		    $(this).ekkoLightbox({ 
+		    });
+		});
+		$(document).on('click', '[data-gallery="planta-gallery"]', function(event) {
+		    event.preventDefault();
+		    $(this).ekkoLightbox({ 
+		    	width: 600,
+		    	alwaysShowClose: true,
 		    });
 		});
 

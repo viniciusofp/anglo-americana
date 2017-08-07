@@ -22,11 +22,11 @@
     	<div class="container">
     		<div class="row">
     			<div class="col-sm-12">
-            <p class="pull-left">Desde 1941 fazendo história no mercado imobilliário.</p>
+            <p class="pull-left">Desde 1941 fazendo história no mercado imobiliário.</p>
             <i id="ligamos-trigger" class="fa fa-phone" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Ligamos pra você"></i>
             <i id="enviamosemail-trigger" class="fa fa-envelope" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Enviamos um email pra você"></i>
             <a href="https://www.facebook.com/AngloAmericana/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <p class="pull-right"><a id="gotoenglish" href="relocation-en.php" data-toggle="tooltip" data-placement="bottom" data-html="true" title='<img src="images/english.png" alt="" style="width: 19px; margin-top: -3px; margin-right: 3px;"> Translate this page'> English</a> <a href=""  data-toggle="tooltip" data-placement="bottom" title="English | Español | Italiano Français | Deutsch | 日本語">Multilingual Staff</a></p>
+            <p class="pull-right"><a id="gotoenglish" href="#" data-toggle="tooltip" data-placement="bottom" data-html="true" title='<img src="images/english.png" alt="" style="width: 19px; margin-top: -3px; margin-right: 3px;"> Translate this page'> English</a> <a href=""  data-toggle="tooltip" data-placement="bottom" title="English | Español | Italiano Français | Deutsch | 日本語">Multilingual Staff</a></p>
     				<p class="pull-right hidden-xs hidden-sm">Tel: (11) 3887-4555</p>
     			</div>
     		</div>
@@ -54,8 +54,8 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Imóveis <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="resultados-de-busca.php">Encontre seu imóvel</a></li>
-                <li><a href="#">Lançamentos</a></li>
-                <li><a href="#">Internacional</a></li>
+                <li><a href="lancamentos.php">Lançamentos</a></li>
+                <li><a href="internacional.php">Internacional</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#" ng-click="cadastreToggle()">Cadastre seu imóvel</a></li>
               </ul>
