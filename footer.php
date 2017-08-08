@@ -43,6 +43,7 @@
 		$(document).on('click', '[data-gallery="imovel-gallery"]', function(event) {
 		    event.preventDefault();
 		    $(this).ekkoLightbox({ 
+		    	alwaysShowClose: true,
 		    });
 		});
 		$(document).on('click', '[data-gallery="planta-gallery"]', function(event) {
