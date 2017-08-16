@@ -32,6 +32,7 @@
 			    <h5 for="exampleInputEmail1" class="blue">COMENTÁRIO</h5>
 			    <textarea type="text" class="form-control" id="exampleInputPassword1" placeholder="Escreva aqui sua mensagem"></textarea>
 			  </div>
+			  <div class="g-recaptcha form-group" data-sitekey="6LdHOigUAAAAAFQAcuopZohwbaDtawh96-hFlYbo"></div>
 			  <button type="submit" class="btn btn-warning">ENVIAR MENSAGEM</button>
 		  	  <p class="red"><small>* Campos obrigatórios</small></p>
 			</form>
