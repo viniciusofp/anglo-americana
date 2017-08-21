@@ -568,7 +568,6 @@ h4 {
 		color: $red;
 	}
 	button.btn-warning {
-		margin-top: 35px;
 		width: 100%;
 	}
 	span::after {
@@ -661,12 +660,16 @@ h4 {
 			background-color: #8a2428;
 	    }
 	}
-	&.home .ssslide {
+	&.home .destaque-foto {
 	  height: 300px;
+	}
+	&.home .ssslide {
+	  border: 0;
 	}
 	&.busca .ssslide {
 	  height: 240px;
 	}
+
 	.ssslide {
 	  background-position: center;
 	  background-size: cover;
@@ -674,6 +677,11 @@ h4 {
 	  border-top: 1px solid #ccc;
 	  border-left: 1px solid #ccc;
 	  border-right: 1px solid #ccc;
+	}
+	.destaque-foto {
+	  background-position: center;
+	  background-size: cover;
+	  width: 100%;
 	}
 	.slider-container {
 		margin-bottom: 30px;

@@ -15,12 +15,12 @@ angular.module('anglo', [])
 */
 
 // Cadastre Seu Imóvel
-.directive('cadastre', function() {
-  return {
-      restrict: 'E',
-      templateUrl: 'directives/cadastre.html'
-  };
-})
+// .directive('cadastre', function() {
+//   return {
+//       restrict: 'E',
+//       templateUrl: 'directives/cadastre.html'
+//   };
+// })
 // Enviar para amigo
 .directive('enviarAmigo', function() {
   return {
@@ -51,7 +51,7 @@ angular.module('anglo', [])
 .controller('main', ['$scope', function($scope) {
 
 // DATA - Imóveis em Destaque
-	$scope.destaqueLocacao = {
+	$scope.destaqueLocacao = [{
 		referencia: '347875',
 		finalidade: 'Locação',
 		tipo: 'Apartamento',
@@ -71,8 +71,51 @@ angular.module('anglo', [])
 		area: 200,
 		descricao: 'Apartamento MOEMA com: 200.00 m² de área útil, 2 dormitórios ( sendo 2 suítes ), banheiro sr. e sra., varanda, mobília, hidro-massagem, escritório, suíte master, churrasqueira privativa. Condomínio com: aquecimento, forno, ar condicionado, piscina, quadra poli-esportiva, sauna, salão de festas, sala ginastica, churrasqueira, espaço gourmet, 4 vagas de garagem.',
 		detalhes: ['Mobília']
+	},
+	{
+		referencia: '347875',
+		finalidade: 'Locação',
+		tipo: 'Casa',
+		condominio: 3600,
+		bairro: 'Vila Nova Conceição',
+		preco_venda: 0,
+		preco_locacao: 25000,
+		fotos: [
+			'http://www.angloamericana.com.br/img/arquivoanexo/347875_1.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/347875_0.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/347875_2.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/347875_3.jpg'
+		],
+		suites: 4,
+		dormitorios: 4,
+		vagas: 4,
+		area: 350,
+		descricao: 'Apartamento MOEMA com: 200.00 m² de área útil, 2 dormitórios ( sendo 2 suítes ), banheiro sr. e sra., varanda, mobília, hidro-massagem, escritório, suíte master, churrasqueira privativa. Condomínio com: aquecimento, forno, ar condicionado, piscina, quadra poli-esportiva, sauna, salão de festas, sala ginastica, churrasqueira, espaço gourmet, 4 vagas de garagem.',
+		detalhes: ['Mobília']
+	},
+	{
+		referencia: '347875',
+		finalidade: 'Locação',
+		tipo: 'Apartamento',
+		condominio: 3600,
+		bairro: 'Itaim Paulista',
+		preco_venda: 0,
+		preco_locacao: 25000,
+		fotos: [
+			'http://www.angloamericana.com.br/img/arquivoanexo/347875_2.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/347875_1.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/347875_0.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/347875_3.jpg'
+		],
+		suites: 4,
+		dormitorios: 4,
+		vagas: 4,
+		area: 350,
+		descricao: 'Apartamento MOEMA com: 200.00 m² de área útil, 2 dormitórios ( sendo 2 suítes ), banheiro sr. e sra., varanda, mobília, hidro-massagem, escritório, suíte master, churrasqueira privativa. Condomínio com: aquecimento, forno, ar condicionado, piscina, quadra poli-esportiva, sauna, salão de festas, sala ginastica, churrasqueira, espaço gourmet, 4 vagas de garagem.',
+		detalhes: ['Mobília']
 	}
-	$scope.destaqueVenda = {
+	]
+	$scope.destaqueVenda = [{
 		referencia: '350680',
 		finalidade: 'Venda',
 		tipo: 'Cobertura',
@@ -93,7 +136,52 @@ angular.module('anglo', [])
 		area: 285,
 		descricao: 'Cobertura decorada com muito bom gosto , pode ser locada também sem os móveis, no Paraíso, piscina e academia privativas , pronta para morar com muito conforto e lazer , ar condicionado em 285.00 m com 4 dts sendo 3 suítes, 4 vagas.',
 		detalhes: []
+	},
+	{
+		referencia: '350680',
+		finalidade: 'Venda',
+		tipo: 'Apartamento',
+		condominio: 3800,
+		bairro: 'Campo Belo',
+		preco_venda: 3800000,
+		preco_locacao: 12500,
+		fotos: [
+			'http://www.angloamericana.com.br/img/arquivoanexo/350680_2.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/350680_0.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/350680_1.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/350680_3.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/350680_4.jpg'
+		],
+		suites: 3,
+		dormitorios: 3,
+		vagas: 3,
+		area: 275,
+		descricao: 'Cobertura decorada com muito bom gosto , pode ser locada também sem os móveis, no Paraíso, piscina e academia privativas , pronta para morar com muito conforto e lazer , ar condicionado em 285.00 m com 4 dts sendo 3 suítes, 4 vagas.',
+		detalhes: []
+	},
+	{
+		referencia: '350680',
+		finalidade: 'Venda',
+		tipo: 'Casa',
+		condominio: 3800,
+		bairro: 'Brooklin',
+		preco_venda: 3800000,
+		preco_locacao: 12500,
+		fotos: [
+			'http://www.angloamericana.com.br/img/arquivoanexo/350680_3.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/350680_0.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/350680_1.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/350680_2.jpg',
+			'http://www.angloamericana.com.br/img/arquivoanexo/350680_4.jpg'
+		],
+		suites: 5,
+		dormitorios: 3,
+		vagas: 4,
+		area: 325,
+		descricao: 'Cobertura decorada com muito bom gosto , pode ser locada também sem os móveis, no Paraíso, piscina e academia privativas , pronta para morar com muito conforto e lazer , ar condicionado em 285.00 m com 4 dts sendo 3 suítes, 4 vagas.',
+		detalhes: []
 	}
+	]
 
 // DATA - Resultados da Busca
 	$scope.imoveisBusca = [

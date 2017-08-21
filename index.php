@@ -115,49 +115,66 @@
 			<h3 class="blue section-title">IMÓVEIS EM DESTAQUE</h3>
 		</div>
 <!-- 		DESTAQUE VENDA -->
-		<div class="slider-container col-sm-6">  
+
+		<div class="slider-container col-sm-6"> 
 			<h3 class="finalidade">Venda</h3> 
 			<div class="slider">
-			    <div ng-repeat="foto in destaqueVenda.fotos" style="background-image: url({{foto}});">
-			    	<a href="detalhes.php#0"><div class="foto-trigger"></div></a>
-			    </div>
+
+<!-- AQUI ESTÁ O LOOP -->
+				<div ng-repeat="destaque in destaqueVenda" style="position: relative">
+					<div>
+					    <div class="destaque-foto" style="background-image: url({{destaque.fotos[0]}});">
+					    	<a href="detalhes.php#1"><div class="foto-trigger"></div></a>
+					    </div>
+					</div>
+					<a  href="detalhes.php#1">
+						<ul class="list-inline">
+							<li><h3>{{destaque.tipo}} - {{destaque.bairro}}</h3></li>
+							<div class="clearfix"></div>
+							<li><h5><i class="fa fa-bed red" aria-hidden="true"></i> Quartos: {{destaque.dormitorios}}</h5></li>
+							<li><h5><i class="fa fa-car red" aria-hidden="true"></i> Vagas: {{destaque.vagas}}</h5></li>
+							<li><h5><i class="fa fa-map-o red" aria-hidden="true"></i> Área: {{destaque.area}} m<sup>2</sup></h5></li>	
+							<div class="clearfix"></div>	
+							<li ng-if="destaque.finalidade == 'Venda'"><h5><strong>{{destaque.finalidade}}: </strong><span style="font-family: Helvetica, Arial, sans-serif">{{destaque.preco_venda | currency:"R$ "}}</span></h5></li>
+							<li ng-if="destaque.finalidade != 'Venda'"><h5><strong>{{destaque.finalidade}}: </strong><span style="font-family: Helvetica, Arial, sans-serif">{{destaque.preco_locacao | currency:"R$ "}}</span></h5></li>				
+							<li><button class="btn btn-warning">Veja os detalhes</button></li>
+						</ul>
+					</a>
+				</div>
 			</div>
-			<a  href="detalhes.php#0">
-				<ul class="list-inline">
-					<li><h3>{{destaqueVenda.tipo}} - {{destaqueVenda.bairro}}</h3></li>
-					<div class="clearfix"></div>
-					<li><h5><i class="fa fa-bed red" aria-hidden="true"></i> Quartos: {{destaqueVenda.dormitorios}}</h5></li>
-					<li><h5><i class="fa fa-car red" aria-hidden="true"></i> Vagas: {{destaqueVenda.vagas}}</h5></li>
-					<li><h5><i class="fa fa-map-o red" aria-hidden="true"></i> Área: {{destaqueVenda.area}} m<sup>2</sup></h5></li>	
-					<div class="clearfix"></div>	
-					<li ng-if="destaqueVenda.finalidade == 'Venda'"><h5><strong>{{destaqueVenda.finalidade}}: </strong><span style="font-family: Helvetica, Arial, sans-serif">{{destaqueVenda.preco_venda | currency:"R$ "}}</span></h5></li>
-					<li ng-if="destaqueVenda.finalidade != 'Venda'"><h5><strong>{{destaqueVenda.finalidade}}: </strong><span style="font-family: Helvetica, Arial, sans-serif">{{destaqueVenda.preco_locacao | currency:"R$ "}}</span></h5></li>				
-					<li><button class="btn btn-warning">Veja os detalhes</button></li>
-				</ul>
-			</a>
 		</div>
+
+
 <!-- 		DESTAQUE LOCAÇÃO -->
-		<div class="slider-container col-sm-6">  
-			<h3 class="finalidade">Locação</h3>
+		
+		<div class="slider-container col-sm-6"> 
+			<h3 class="finalidade">Locação</h3> 
 			<div class="slider">
-			    <div ng-repeat="foto in destaqueLocacao.fotos" style="background-image: url({{foto}});">
-			    	<a href="detalhes.php#1"><div class="foto-trigger"></div></a>
-			    </div>
+<!-- AQUI ESTÁ O LOOP -->
+				<div ng-repeat="destaque in destaqueLocacao" style="position: relative">
+					<div>
+					    <div class="destaque-foto" style="background-image: url({{destaque.fotos[0]}});">
+					    	<a href="detalhes.php#1"><div class="foto-trigger"></div></a>
+					    </div>
+					</div>
+					<a  href="detalhes.php#1">
+						<ul class="list-inline">
+							<li><h3>{{destaque.tipo}} - {{destaque.bairro}}</h3></li>
+							<div class="clearfix"></div>
+							<li><h5><i class="fa fa-bed red" aria-hidden="true"></i> Quartos: {{destaque.dormitorios}}</h5></li>
+							<li><h5><i class="fa fa-car red" aria-hidden="true"></i> Vagas: {{destaque.vagas}}</h5></li>
+							<li><h5><i class="fa fa-map-o red" aria-hidden="true"></i> Área: {{destaque.area}} m<sup>2</sup></h5></li>	
+							<div class="clearfix"></div>	
+							<li ng-if="destaque.finalidade == 'Venda'"><h5><strong>{{destaque.finalidade}}: </strong><span style="font-family: Helvetica, Arial, sans-serif">{{destaque.preco_venda | currency:"R$ "}}</span></h5></li>
+							<li ng-if="destaque.finalidade != 'Venda'"><h5><strong>{{destaque.finalidade}}: </strong><span style="font-family: Helvetica, Arial, sans-serif">{{destaque.preco_locacao | currency:"R$ "}}</span></h5></li>				
+							<li><button class="btn btn-warning">Veja os detalhes</button></li>
+						</ul>
+					</a>
+
+				</div>
 			</div>
-			<a  href="detalhes.php#1">
-				<ul class="list-inline">
-					<li><h3>{{destaqueLocacao.tipo}} - {{destaqueLocacao.bairro}}</h3></li>
-					<div class="clearfix"></div>
-					<li><h5><i class="fa fa-bed red" aria-hidden="true"></i> Quartos: {{destaqueLocacao.dormitorios}}</h5></li>
-					<li><h5><i class="fa fa-car red" aria-hidden="true"></i> Vagas: {{destaqueLocacao.vagas}}</h5></li>
-					<li><h5><i class="fa fa-map-o red" aria-hidden="true"></i> Área: {{destaqueLocacao.area}} m<sup>2</sup></h5></li>	
-					<div class="clearfix"></div>	
-					<li ng-if="destaqueLocacao.finalidade == 'Venda'"><h5><strong>{{destaqueLocacao.finalidade}}: </strong><span style="font-family: Helvetica, Arial, sans-serif">{{destaqueLocacao.preco_venda | currency:"R$ "}}</span></h5></li>
-					<li ng-if="destaqueLocacao.finalidade != 'Venda'"><h5><strong>{{destaqueLocacao.finalidade}}: </strong><span style="font-family: Helvetica, Arial, sans-serif">{{destaqueLocacao.preco_locacao | currency:"R$ "}}</span></h5></li>				
-					<li><button class="btn btn-warning">Veja os detalhes</button></li>
-				</ul>
-			</a>
 		</div>
+
 	</div>
 </div>
 

@@ -75,5 +75,5 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-
-    <cadastre></cadastre>
+    <?php include 'directives/cadastre.php' ?>
+    <!-- <cadastre></cadastre> -->

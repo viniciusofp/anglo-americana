@@ -445,7 +445,6 @@ h4 {
   #cadastre-wrapper .obrigatorio {
     color: #9e292e; }
   #cadastre-wrapper button.btn-warning {
-    margin-top: 35px;
     width: 100%; }
   #cadastre-wrapper span::after {
     top: 9px; }
@@ -516,8 +515,10 @@ h4 {
   #imoveis-wrapper .btn.btn-warning:hover {
     color: white;
     background-color: #8a2428; }
-#imoveis-wrapper.home .ssslide {
+#imoveis-wrapper.home .destaque-foto {
   height: 300px; }
+#imoveis-wrapper.home .ssslide {
+  border: 0; }
 #imoveis-wrapper.busca .ssslide {
   height: 240px; }
 #imoveis-wrapper .ssslide {
@@ -527,6 +528,10 @@ h4 {
   border-top: 1px solid #ccc;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc; }
+#imoveis-wrapper .destaque-foto {
+  background-position: center;
+  background-size: cover;
+  width: 100%; }
 #imoveis-wrapper .slider-container {
   margin-bottom: 30px;
   transition: 0.2s;
