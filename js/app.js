@@ -43,6 +43,32 @@ angular.module('anglo', [])
   };
 })
 
+.directive('format', function ($filter) {
+'use strict';
+
+return {
+    require: '?ngModel',
+    link: function (scope, elem, attrs, ctrl) {
+        if (!ctrl) {
+            return;
+        }
+
+        ctrl.$formatters.unshift(function () {
+            return $filter('number')(ctrl.$modelValue);
+        });
+
+        ctrl.$parsers.unshift(function (viewValue) {
+            var plainNumber = viewValue.replace(/[\,\.]/g, ''),
+                b = $filter('number')(plainNumber);
+
+            elem.val(b);
+
+            return plainNumber;
+        });
+    }
+};
+})
+
 /*
 	Controllers
 */
@@ -759,13 +785,22 @@ angular.module('anglo', [])
 
 // UI - Home - Busca de Imóveis - Manter preço máximo maior que preço mínimo
 	$scope.changePrecoMin = function() {
+		$scope.precoMin = parseInt($scope.precoMin);
+		$scope.precoMax = parseInt($scope.precoMax);
 		if ($scope.precoMax <= $scope.precoMin && $scope.precoMax != undefined) {
-			$scope.precoMax = $scope.precoMin + 500;
+			$scope.precoMax = $scope.precoMin + 1000;
 		}
 	}
 	$scope.changePrecoMax = function() {
+		console.log($scope.precoMax);
+		$scope.precoMax = parseInt($scope.precoMax);
+		$scope.precoMin = parseInt($scope.precoMin);
 		if ($scope.precoMax <= $scope.precoMin && $scope.precoMin != undefined && $scope.precoMax != undefined) {
-			$scope.precoMax = $scope.precoMin + 500;
+			if ($scope.precoMax - 1000 > 0) {
+				$scope.precoMin = $scope.precoMax - 1000;
+			} else {
+				$scope.precoMin = 0;
+			}
 		};
 	}
 

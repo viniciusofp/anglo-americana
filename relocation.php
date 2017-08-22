@@ -28,7 +28,7 @@
 					<p>Com uma equipe de corretores treinados em comunicação cross-culture e fluente em diversos idiomas (inglês, espanhol, francês, japonês, alemão e italiano) entregamos um serviço exclusivo e personalizado para que sua recepção seja a mais confortável possível.</p>
 					<p>Toda essa expertise nos fornece habilidade para entender suas prioridades e preferências em sua chegada à São Paulo. Nossa missão é encontrar o imóvel ideal para você e sua família.</p>
 				</div>
-				<a name="stepbystep"></a>
+				<a name="advantages"></a>
 				<div class="spacer"></div>
 				<div id="way-2" class="section-div off">
 					<h3>VANTAGENS</h3>
