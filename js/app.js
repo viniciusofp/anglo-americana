@@ -792,7 +792,6 @@ return {
 		}
 	}
 	$scope.changePrecoMax = function() {
-		console.log($scope.precoMax);
 		$scope.precoMax = parseInt($scope.precoMax);
 		$scope.precoMin = parseInt($scope.precoMin);
 		if ($scope.precoMax <= $scope.precoMin && $scope.precoMin != undefined && $scope.precoMax != undefined) {
