@@ -38,14 +38,14 @@
 					<h5 class="blue">PREÇO MÍNIMO</h5>
 					<div class="row">
 						<div class="preco-input input-group col-xs-12">
-						  <input ng-model="precoMin" ng-change="changePrecoMin()" type="text" pattern="[0-9]+([\.,][0-9]+)*" class="form-control" aria-describedby="preco-max" min="0" format>
+						  <input ng-model="precoMin" onchange="angular.element(this).scope().changePrecoMin()" type="text" pattern="[0-9]+([\.,][0-9]+)*" class="form-control" aria-describedby="preco-max" min="0" format>
 						  <span class="input-group-addon" id="preco-max">mín.</span>
 						</div>
 					</div>
 					<h5 class="blue">PREÇO MÁXIMO</h5>
 					<div class="row">
 						<div class="preco-input input-group col-xs-12">
-						  <input ng-model="precoMax" ng-change="changePrecoMax()" type="text" pattern="[0-9]+([\.,][0-9]+)*" class="form-control" aria-describedby="preco-min" min="0" format>
+						  <input ng-model="precoMax" onchange="angular.element(this).scope().changePrecoMax()" type="text" pattern="[0-9]+([\.,][0-9]+)*" class="form-control" aria-describedby="preco-min" min="0" format>
 						  <span class="input-group-addon" id="preco-min">máx.</span>
 						</div>
 					</div>
