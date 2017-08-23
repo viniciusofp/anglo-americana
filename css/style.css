@@ -377,7 +377,7 @@ h4 {
   margin: 10px;
   color: white;
   font-size: 24px;
-  z-index: 99999;
+  z-index: 9999;
   position: absolute;
   display: block;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);

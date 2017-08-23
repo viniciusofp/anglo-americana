@@ -88,7 +88,7 @@
 								<h5 class="blue">ÁREA ÚTIL</h5>
 								<div class="row">
 									<div class="input-group col-xs-12">
-									  <input type="number" step="10" class="form-control" aria-describedby="area-util">
+									  <input type="number" step="10" class="form-control" aria-describedby="area-util" min="0">
 									  <span class="input-group-addon" id="area-util">m<sup>2</sup></span>
 									</div>
 								</div>
@@ -97,7 +97,7 @@
 								<h5 class="blue">ÁREA TOTAL</h5>
 								<div class="row">
 									<div class="input-group col-xs-12">
-									  <input type="number" step="10" class="form-control" aria-describedby="area-total">
+									  <input type="number" step="10" class="form-control" aria-describedby="area-total" min="0">
 									  <span class="input-group-addon" id="area-total">m<sup>2</sup></span>
 									</div>
 								</div>
@@ -109,13 +109,13 @@
 							<div class="col-xs-12 col-sm-6">
 								<h5 class="blue">QUARTOS</h5>
 								<div class="input-group" style="width: 100%">
-								  <input type="number" class="form-control">
+								  <input type="number" class="form-control" min="0">
 								</div>
 							</div>
 							<div class="col-xs-12 col-sm-6">
 								<h5 class="blue">SUÍTES</h5>
 								<div class="input-group" style="width: 100%">
-								  <input type="number" class="form-control">
+								  <input type="number" class="form-control" min="0">
 								</div>
 							</div>
 						</div>
@@ -123,7 +123,7 @@
 						<h5 class="blue">VAGAS DE GARAGEM</h5>
 						<div class="row">
 							<div class="input-group col-xs-12">
-							  <input type="number" class="form-control">
+							  <input type="number" class="form-control" min="0">
 							</div>
 						</div>
 
@@ -131,7 +131,7 @@
 						<h5 class="blue">VALOR PRETENDIDO</h5>
 						<div class="row">
 							<div class="preco-input input-group col-xs-12">
-							  <input ng-model="val_pret" step="100" class="form-control" min="0">
+							  <input ng-model="val_pret" step="100" class="form-control" min="0" type="text" pattern="[0-9]+([\.,][0-9]+)*" format>
 							  <span></span>
 							</div>
 						</div>
@@ -139,7 +139,7 @@
 						<h5 class="blue">VALOR DO CONDOMÍNIO</h5>
 						<div class="row">
 							<div class="preco-input input-group col-xs-12">
-							  <input type="number" step="100" class="form-control" min="0">
+							  <input ng-model="val_cond" type="text" pattern="[0-9]+([\.,][0-9]+)*" format class="form-control" min="0">
 							  <span></span>
 							</div>
 						</div>
@@ -147,7 +147,7 @@
 						<h5 class="blue">VALOR DO IPTU</h5>
 						<div class="row">
 							<div class="preco-input input-group col-xs-12">
-							  <input type="number" step="100" class="form-control" min="0">
+							  <input ng-model="val_iptu" type="text" pattern="[0-9]+([\.,][0-9]+)*" format class="form-control" min="0">
 							  <span></span>
 							</div>
 						</div>
